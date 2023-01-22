@@ -420,3 +420,38 @@
     grid-row-end: 22;
   }
 }
+
+.count-down-wrap .time-left {
+  display: inline-block;
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px 5px;
+    text-align: center;
+    height: 115px;
+    width: 80px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #D57467;
+    box-shadow: 0 3px 3px #0003;
+}
+.count-down-wrap .time-left span.num {
+    padding-bottom: 10px;
+}
+.count-down-wrap .time-left span {
+    display: block;
+    line-height: 1em;
+}
+.count-down-wrap .num {
+    color: #D57467 !important;
+}
+.count-down-wrap .time-left span.count-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.count-down-wrap .time-left span {
+    display: block;
+    line-height: 1em;
+}
