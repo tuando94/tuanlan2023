@@ -1424,7 +1424,6 @@ a:hover {
 
 .t8-contact-form {
   width: 90%;
-  margin: auto;
 }
 
 .t8-form-group {
@@ -2746,4 +2745,5 @@ a:hover {
   .contact-decor3 {
     display: none;
   }
+  
 }

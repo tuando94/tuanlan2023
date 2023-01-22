@@ -1,8 +1,45 @@
 /*CSS COMMON Ở ĐÂY*/
 @font-face {
   font-family: "Mtd-BrandPro";
-  src: url(/fonts/MTD-Brand-Pro-Shade.otf) format('onetype');
+  src: url(/fonts/MTD-Brand-Pro-Shade.otf) format("onetype");
   font-weight: 400;
+}
+.mid-hero {
+  width: 501px;
+  height: 500px;
+  top: 16px;
+  position: relative;
+  object-fit: cover;
+  object-position: top;
+}
+img {
+  border-style: none;
+}
+.tr-big {
+  top: -2%;
+  right: 6%;
+  height: 90px;
+  transform: rotate(9.78deg);
+}
+.absolute {
+  position: absolute;
+}
+.bl-sm {
+  bottom: -2%;
+  left: 20%;
+  height: 105px;
+  transform: rotate(-29.16deg);
+}
+.tl-sm {
+  top: -3%;
+  right: 80%;
+  height: 80px;
+  transform: rotate(-29.16deg);
+}
+.tr-sm {
+  top: 6%;
+  right: 58%;
+  height: 60px;
 }
 .nt-container {
   max-width: 1160px;
@@ -227,7 +264,7 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(13, 1fr);
-  grid-template-rows: repeat(12, minmax(0,1fr));
+  grid-template-rows: repeat(12, minmax(0, 1fr));
   grid-gap: 24px;
 }
 .gallery-item-1 {
@@ -419,39 +456,81 @@
     grid-row-start: 17;
     grid-row-end: 22;
   }
+  .bl-sm {
+    bottom: 3%;
+    left: 8%;
+    height: 80px;
+    transform: rotate(-29.16deg);
+  }
+  .mid-hero {
+    width: 310px;
+    height: 300px;
+    top: 4px;
+    position: relative;
+    object-fit: cover;
+    object-position: top;
+  }
+  .tr-big {
+    top: -10%;
+    right: 6%;
+    height: 72px;
+    transform: rotate(9.78deg);
+  }
+  .tr-sm {
+    top: -1%;
+    right: 47%;
+    height: 36px;
+  }
+  .tl-sm {
+    top: -19%;
+    right: 72%;
+    height: 60px;
+    transform: rotate(-29.16deg);
+  }
 }
 
 .count-down-wrap .time-left {
   display: inline-block;
-    position: relative;
-    font-size: 40px;
-    font-weight: 700;
-    padding: 20px 5px;
-    text-align: center;
-    height: 115px;
-    width: 80px;
-    margin: 10px 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid #D57467;
-    box-shadow: 0 3px 3px #0003;
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 20px 5px;
+  text-align: center;
+  height: 115px;
+  width: 80px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #d57467;
+  box-shadow: 0 3px 3px #0003;
 }
 .count-down-wrap .time-left span.num {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 .count-down-wrap .time-left span {
-    display: block;
-    line-height: 1em;
+  display: block;
+  line-height: 1em;
 }
 .count-down-wrap .num {
-    color: #D57467 !important;
+  color: #d57467 !important;
 }
 .count-down-wrap .time-left span.count-label {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .count-down-wrap .time-left span {
-    display: block;
-    line-height: 1em;
+  display: block;
+  line-height: 1em;
 }
+
+.graphic-box {
+  z-index: 1;
+}
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+.relative {
+  position: relative;
+}
+
