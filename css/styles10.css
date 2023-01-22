@@ -43,7 +43,7 @@ body {
   --color-2: #ffedea;
   --color-3: #6c6ea0;
   --color-4: #fffdf8;
-  --font-1: "Mtd-BrandPro";
+  --font-1: "Meow Script";
   --font-2: "Roboto", sans-serif;
 }
 
@@ -246,7 +246,7 @@ a:hover {
 
 .t8-location-date-default {
   top: 32%;
-  left: 40.5%;
+  left: 38.5%;
 }
 
 .t8-location-mid-add {
@@ -544,6 +544,7 @@ a:hover {
 .t8-video-top {
   margin-top: 15%;
   width: 100%;
+  display: flex;
 }
 
 .t8-main-video .title {
@@ -559,7 +560,7 @@ a:hover {
   margin-top: 30px;
   color: var(--color-2);
   font-size: 20px;
-  white-space: pre-wrap;
+  white-space: normal;
   padding: 0 1rem;
   font-family: var(--font-2);
 }
@@ -834,7 +835,7 @@ a:hover {
   padding-right: 2%;
   font-family: var(--font-2);
   color: var(--color-1);
-  white-space: pre-wrap;
+  white-space: normal;
 }
 
 .t8-journey-box {
@@ -1134,7 +1135,7 @@ a:hover {
   padding-right: 2%;
   font-family: var(--font-2);
   color: var(--color-1);
-  white-space: pre-wrap;
+  white-space: normal;
 }
 
 .t8-journey-box {
@@ -1300,7 +1301,7 @@ a:hover {
   font-family: var(--font-2);
   max-width: 600px;
   overflow-wrap: anywhere;
-  white-space: pre-wrap;
+  white-space: normal;
 }
 
 .t8-event-content .home {
@@ -1406,7 +1407,7 @@ a:hover {
   color: var(--color-2);
   max-width: 90%;
   overflow-wrap: anywhere;
-  white-space: pre-wrap;
+  white-space: normal;
   margin: auto;
 }
 
@@ -1416,7 +1417,7 @@ a:hover {
   font-size: 20px;
   font-family: var(--font-2);
   overflow-wrap: anywhere;
-  white-space: pre-wrap;
+  white-space: normal;
   margin: auto;
   max-width: 90%;
 }
@@ -1663,7 +1664,7 @@ a:hover {
 }
 
 :root {
-  --font-1: "Mtd-BrandPro";
+  --font-1: "Meow Script";
 }
 
 :root {
