@@ -2324,6 +2324,11 @@
                 transform: translateY(0)
             }
         }
+
+        .pageMain {
+            overflow: hidden;
+            display: none;
+        }
     </style>
     <meta http-equiv="origin-trial"
         content="Azy2GzGQxPvGmQwVDdEL1jRuKSXIdSSASA06JCA6PCeaVHpFYf8Rw5/q+9adc9CrBTxfCeUwxkuDM4PWEmdqywwAAACKeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZWFkc2VydmljZXMuY29tOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2NjEyOTkxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
@@ -2334,6 +2339,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles10.css">
+    <script>
+        function onReady(callback) {
+            var intervalId = window.setInterval(function () {
+                if (document.getElementsByTagName('body')[0] !== undefined) {
+                    window.clearInterval(intervalId);
+                    callback.call(this);
+                }
+            }, 1000);
+        }
+
+        onReady(function () {
+            // setTimeout(() => {
+                document.querySelector('.pageMain').style.display = 'block';
+                document.querySelector('.pageMain').style.overflow = 'auto';
+                document.getElementById('loading').remove();
+            // }, 1000);
+        });
+    </script>
 </head>
 
 <div class="no-fb-chat" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22no-fb-chat%22%5D%7D%7D">
@@ -2341,9 +2364,21 @@
         <!---->
         <div id="__layout">
             <div class="ws">
-                <!---->
-                <div style="">
-
+                <div id="loading" class="loading" data-v-c2d30ec0="">
+                    <div role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        class="v-progress-circular v-progress-circular--visible v-progress-circular--indeterminate"
+                        style="height:200px;width:200px;color:#ea7573;caret-color:#ea7573;" data-v-c2d30ec0=""><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="21.62162162162162 21.62162162162162 43.24324324324324 43.24324324324324"
+                            style="transform:rotate(0deg);">
+                            <circle fill="transparent" cx="43.24324324324324" cy="43.24324324324324" r="20"
+                                stroke-width="3.243243243243243" stroke-dasharray="125.664"
+                                stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay"></circle>
+                        </svg>
+                        <div class="v-progress-circular__info"></div>
+                    </div>
+                </div>
+                <div class="pageMain">
                     <div class="t8">
                         <section data-widget="header" class="t8-banner">
                             <div class="container">
