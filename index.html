@@ -2348,7 +2348,18 @@
                 }
             }, 1000);
         }
+        function closePopup() {
+            document.body.style.overflowY = 'auto';
+            document.querySelector('#dialog-previewImage').style.display = 'none';
+        }
 
+        function openPopup(link) {
+            console.log(link);
+            document.querySelector('#image-preview').src = `${link}`;
+            document.querySelector('#dialog-previewImage').style.display = 'flex';
+            document.body.style.overflowY  = 'hidden';
+
+        }
         onReady(function () {
             // setTimeout(() => {
             document.querySelector('.pageMain').style.display = 'block';
@@ -2434,14 +2445,25 @@
                             <div class="wrapper">
                                 <div class="t8-banner-main">
                                     <div class="banner-groom">
-                                        <div class="name">
+                                        <div class="name"
+                                            style=" font-weight: 400; text-shadow: -2px 2px 0px rgb(28 28 28 / 25%);">
                                             <p>Đỗ Tuấn</p>
                                         </div>
                                         <div class="space"></div>
                                     </div>
+                                    <div data-gjs-type="text" draggable="true" data-highlightable="1" class="and"
+                                        id="iy4ei">
+                                        <div data-gjs-type="text" draggable="true" data-highlightable="1"
+                                            data-block="decoration" data-decoration-id="4" class="decoration"
+                                            id="ihj7f"><img data-gjs-type="image"
+                                                src="https://static.namtay.vn/assets/img/theme5/and.png" alt=""
+                                                id="i97zl"></div>
+
+                                    </div>
                                     <div class="banner-bride">
-                                        <div class="plus">+</div>
-                                        <div class="name">
+                                        <div class="plus"> </div>
+                                        <div class="name"
+                                            style=" font-weight: 400; text-shadow: -2px 2px 0px rgb(28 28 28 / 25%);">
                                             <p>Nguyễn Làn</p>
                                         </div>
                                     </div>
@@ -2451,35 +2473,48 @@
                                 <div class="t8-banner-time text-center">05.03.2023</div>
                             </div>
                         </section>
-                        <section data-widget="location" class="t8-location">
-                            <div class="container text-center">
-                                <div class="t8-location-top">
-                                    <p>Trân trọng kính mời</p>
-                                    <div data-id="invitation" id="invitation" class="guest_name"
-                                        style="display: none !important;">{{__guest_name__}}</div>
-                                    <p></p>
-                                </div>
-                                <div class="t8-location-mid">
-                                    <div class="t8-location-mid-time">
-                                        <p>Hôn lễ sẽ diễn ra vào hồi 11 giờ</p>
+                        <section data-widget="location" class=" t8-link">
+                            <div class="overlay">
+                                <div class="container text-center">
+                                    <div class="t8-location-top">
+                                        <p>Trân trọng kính mời</p>
+                                        <div data-id="invitation" id="invitation" class="guest_name"
+                                            style="display: none !important;">{{__guest_name__}}</div>
+                                        <p></p>
                                     </div>
-                                    <div class="t8-location-img">
-                                        <div data-block="decoration" data-decoration-id="4"><img
-                                                src="./assets/img/theme/invite-calendar.png"
-                                                class="t8-location-calendar">
-                                            <div class="t8-location-date-default">
-                                                <p>05.03</p>
-                                            </div>
+                                    <div class="t8-location-mid">
+                                        <div class="t8-location-mid-time">
+                                            <p>Tiệc cưới sẽ diễn ra vào hồi 10 giờ 30 phút</p>
                                         </div>
-                                    </div><a data-block-node="url" href="#" target="_blank"
-                                        class="t8-location-mid-add">Nhà hàng Minh Thành, 614 Cao Thắng, Hà Lầm, Thành
-                                        phố Hạ Long, Quảng Ninh</a>
-                                </div>
-                                <div class="t8-location-mid-hope">Sự hiện diện của bạn là niềm vinh hạnh của chúng tôi!
+                                        <div class="t8-location-img">
+                                            <div data-block="decoration" data-decoration-id="4"><img
+                                                    src="./assets/img/theme/invite-calendar.png"
+                                                    class="t8-location-calendar">
+                                                <div class="t8-location-date-default">
+                                                    <p
+                                                        style="font-weight: 500; text-shadow: -2px 2px 0px rgb(28 28 28 / 25%); color: red;">
+                                                        05.03</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="t8-location-mid-time-update">
+                                            <p>tại địa chỉ</p>
+                                        </div>
+                                        <div class="t8-location-mid-add">Nhà Hàng Tiệc Cưới - Khách Sạn Kim Chi, Phạm
+                                            Ngọc Đa, TT. Tiên Lãng, Tiên Lãng, Hải Phòng
+                                            <a data-block-node="url" href="https://goo.gl/maps/VwDVcLG9hiHNBshK7"
+                                                target="_blank" class="t8-location-mid-add-update"></a>
+                                        </div>
+                                    </div>
+                                    <div class="t8-location-mid-hope">Sự hiện diện của bạn là niềm vinh hạnh của chúng
+                                        tôi!
+                                    </div>
                                 </div>
                             </div>
                         </section>
-                        <section data-widget="image-link" class="t8-link">
+                        <!-- <section data-widget="image-link" class="t8-link">
                             <div class="overlay">
                                 <div class="container">
                                     <div class="row t8-link-content">
@@ -2496,7 +2531,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </section> -->
                         <section data-widget="bio" class="t8-story">
                             <div class="container" id="i7f1f">
                                 <div class="row main-bride">
@@ -2602,12 +2637,13 @@
                                                         src="./assets/img/theme/story-icon-heart-message.svg"
                                                         class="journey-icon"></div>
                                                 <div class="t8-journey-box">
-                                                    <div class="t8-journey-img"><img
-                                                            src="./assets/img/theme/story-main-img.svg" alt="">
+                                                    <div class="t8-journey-img" style="background-color: #f19792;"><img
+                                                            src="./assets/img/theme/FirtDate.jpg" alt=""
+                                                            style="border: 1px solid #dfe6fb;">
                                                         <div data-block-node="journey-point-date" class="date">
-                                                            20.03.2022</div>
-                                                        <div data-block-node="journey-point-name" class="title">Mốc thời
-                                                            gian kỷ niệm</div>
+                                                            05.12.2021</div>
+                                                        <div data-block-node="journey-point-name" class="title">Cuộc hẹn
+                                                            đầu tiên</div>
                                                     </div>
                                                 </div>
                                                 <div data-block-node="journey-point-content" class="t8-journey-text">Ở
@@ -2634,11 +2670,12 @@
                                                     phải không nào ♥</div>
                                                 <div class="t8-journey-box">
                                                     <div class="t8-journey-img"><img
-                                                            src="./assets/img/theme/story-main-img.svg" alt="">
+                                                            src="./assets/img/theme/2205_w023_n001_2321b_p1_2321.jpg"
+                                                            alt="">
                                                         <div data-block-node="journey-point-date" class="date">
-                                                            20.03.2022</div>
-                                                        <div data-block-node="journey-point-name" class="title">Mốc thời
-                                                            gian kỷ niệm</div>
+                                                            01.01.2022</div>
+                                                        <div data-block-node="journey-point-name" class="title">Sapa -
+                                                            Sương mù</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2648,11 +2685,11 @@
                                                         class="journey-icon"></div>
                                                 <div class="t8-journey-box">
                                                     <div class="t8-journey-img"><img
-                                                            src="./assets/img/theme/story-main-img.svg" alt="">
+                                                            src="./assets/img/theme/19198017333.png" alt="">
                                                         <div data-block-node="journey-point-date" class="date">
-                                                            20.03.2022</div>
-                                                        <div data-block-node="journey-point-name" class="title">Mốc thời
-                                                            gian kỷ niệm</div>
+                                                            04.06.2022</div>
+                                                        <div data-block-node="journey-point-name" class="title">Nha
+                                                            Trang - Ngày nắng</div>
                                                     </div>
                                                 </div>
                                                 <div data-block-node="journey-point-content" class="t8-journey-text">
@@ -2664,11 +2701,42 @@
                                                     chút nhaaaa, viết dài ra thì trông cái chỗ này nó mới đẹp ấy mọi
                                                     người ạ ♥</div>
                                             </div>
+                                            <div data-block="journey-point" class="t8-journey-item">
+                                                <div data-block="decoration" data-decoration-id="4"><img
+                                                        src="./assets/img/theme/story-icon-heart.svg"
+                                                        class="journey-icon"></div>
+
+                                                <div data-block-node="journey-point-content" class="t8-journey-text">Vẫn
+                                                    là những ngày kỷ niệm đặc biệt thôi, nhưng thay đổi vị trí ảnh để
+                                                    tấm Thiệp cưới Online của bạn thêm hài hòa, xinh xắn hơn. À mà các
+                                                    bạn đừng quên đăng những bức ảnh đánh dấu kỷ niệm thật đẹp nhé
+                                                    ♥<br><br>Các bạn có thể tùy chọn thêm bao nhiêu mốc thời gian cũng
+                                                    được, bằng cách tạo bản sao và di chuyển lên xuống giữa các mốc thời
+                                                    gian kỷ niệm. Rất đơn giản mà lại hiệu quả để ngồi "lục lại ký ức"
+                                                    phải không nào ♥</div>
+                                                <div class="t8-journey-box">
+                                                    <div class="t8-journey-img"><img
+                                                            src="./assets/img/theme/6094451.jpg" alt="">
+                                                        <div data-block-node="journey-point-date" class="date">
+                                                            30.09.2022</div>
+                                                        <div data-block-node="journey-point-name" class="title">Tam Đảo
+                                                            - Sinh Nhật đáng nhớ</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div><i class="bx bxs-heart icon-heart"></i>
                                     </div>
                                 </div>
                             </div>
                         </section>
+                        <div id="dialog-previewImage" class="preview-image" style="display: none;" onclick="closePopup()">
+                            <div class="no-padding">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                    style="margin-right: 3px;" onclick="closePopup()"><span
+                                        aria-hidden="true">×</span></button>
+                                <img id="image-preview" src="./assets/img/theme/AnhCuoi/gallery-1.jpeg">
+                            </div>
+                        </div>
                         <section data-widget="album" class="t8-gallery">
                             <div class="container">
                                 <div class="row">
@@ -2676,30 +2744,32 @@
                                         <p>Album ảnh</p>
                                     </div>
                                 </div>
+
                                 <div data-block="album" class="t8-list-img">
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-1.jpeg">
+
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-1.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-1.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-2.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-3.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-2.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-3.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-3.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-3.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-4.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-4.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-4.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-5.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-5.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-5.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-6.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-6.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-6.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-7.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-7.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-7.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-8.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-8.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-8.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-9.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-9.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-9.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-10.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-10.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-10.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-11.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-11.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-11.jpeg">
                                     </div>
-                                    <div class="nt-album-item"><img src="./assets/img/theme/AnhCuoi/gallery-12.jpeg">
+                                    <div class="nt-album-item" onclick="openPopup(`./assets/img/theme/AnhCuoi/gallery-12.jpeg`)"><img src="./assets/img/theme/AnhCuoi/gallery-12.jpeg">
                                     </div>
                                 </div>
                             </div>
@@ -2821,8 +2891,10 @@
                             </div>
                         </section>
                         <div class="wr-connector">
-                            <section data-widget="rsvp" class="t8-contact" style="display: flex; flex-wrap: nowrap; flex-direction: column-reverse; align-content: center; justify-content: center;">
-                                <div class="container" style=" z-index: 99; background-color: #83859f; border-radius: 30px; padding: 20px; box-shadow: 0px 12px 10px rgb(39 81 46 / 10%); width: calc(100vw - 40px); margin-bottom: 50px;">
+                            <section data-widget="rsvp" class="t8-contact"
+                                style="display: flex; flex-wrap: nowrap; flex-direction: column-reverse; align-content: center; justify-content: center;">
+                                <div class="container"
+                                    style=" z-index: 99; background-color: #83859f; border-radius: 30px; padding: 20px; box-shadow: 0px 12px 10px rgb(39 81 46 / 10%); width: calc(100vw - 40px); margin-bottom: 50px;">
                                     <div class="content">
                                         <div data-block="decoration" data-decoration-id="4">
                                             <div class="sticker"><img src="./assets/img/theme/contact-phone.svg"
@@ -2864,9 +2936,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div data-gjs-type="text" draggable="true" data-highlightable="1" class="graphic-box col-span-6 relative" id="ispdo" style="display: flex; justify-content: center;">
-                                    <img data-gjs-type="image"
-                                        src="assets/img/theme/sssss.png" alt=""
+                                <div data-gjs-type="text" draggable="true" data-highlightable="1"
+                                    class="graphic-box col-span-6 relative" id="ispdo"
+                                    style="display: flex; justify-content: center;">
+                                    <img data-gjs-type="image" src="assets/img/theme/sssss.png" alt=""
                                         data-editable="true" data-max-width="900" class="mid-hero" id="ielm8">
                                     <img data-gjs-type="image"
                                         src="https://static.namtay.vn/assets/img/theme17/heart.gif" alt=""
