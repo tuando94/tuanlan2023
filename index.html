@@ -2345,7 +2345,9 @@
     <script>
         var splide = null;
         document.addEventListener('DOMContentLoaded', function () {
-            splide = new Splide('.splide');
+            splide = new Splide('.splide', {
+                type: 'loop'
+            });
             splide.mount();
         });
         function onReady(callback) {
@@ -2357,7 +2359,7 @@
             }, 1000);
         }
         function closePopup(event) {
-            if (event.target.localName != 'div') {
+            if (event!= null && event.target.localName != 'div') {
                 return;
             }
             document.body.style.overflowY = 'auto';
@@ -2365,11 +2367,10 @@
         }
 
         function openPopup(index) {
-            splide.Components.Controller.go(index);
+            splide.go(index);
             // document.querySelector('#image-preview').src = `${link}`;
             document.querySelector('#dialog-previewImage').style.display = 'flex';
             document.body.style.overflowY = 'hidden';
-
         }
         onReady(function () {
             // setTimeout(() => {
