@@ -4,6 +4,76 @@
   src: url(/fonts/MTD-Brand-Pro-Shade.otf) format("onetype");
   font-weight: 400;
 }
+.form-control2 {
+  font-size: 14px;
+    line-height: 125%;
+    margin-top: 3px;
+    width: 100%;
+    padding: 0 10px;
+    height: 42px;
+    background-color: var(--color-2);
+    font-family: var(--font-2);
+    border-radius: 0;
+}
+.box-invite {
+  background-color: var(--color-2);
+  border-radius: 5px;
+  padding: 15px 0px 10px 0px;
+}
+.mt-40 {
+  margin-top: 30px;
+}
+.box-icon-ts {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-ts-boxp {
+  display: contents;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+.wrapper-ts-boxp .optionboxp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 20px 0 20px;
+  fill: #777676;
+  color: #777676;
+}
+.wrapper-ts-boxp .checked {
+  fill: #d57467;
+  color: #d57467;
+}
+.wrapper-ts-boxp .optionboxp .dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.wrapper-ts-boxp .optionboxp span {
+  font-size: 13px;
+  text-align: center;
+}
+
+.wrapper-ts-boxp .optionboxp svg {
+  width: 45px;
+}
+
 .preview-image {
   display: flex;
   align-content: center;

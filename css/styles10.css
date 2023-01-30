@@ -1443,7 +1443,7 @@ a:hover {
 }
 
 .t8-contact-form {
-  width: 90%;
+  width: 376px;
 }
 
 .t8-form-group {
@@ -1461,7 +1461,7 @@ a:hover {
   line-height: 125%;
   color: rgba(0, 0, 0, 0.3);
   margin-top: 3px;
-  width: 376px;
+  width: 100%;
   padding: 0 10px;
   height: 42px;
   background-color: var(--color-2);
@@ -1493,12 +1493,13 @@ a:hover {
 }
 
 .t8-form-group .form-btn-submit {
-  padding: 24px 48px;
   border: none;
   font-size: 24px;
   font-family: var(--font-2);
-  background-color: var(--color-2);
-  color: var(--color-3);
+  background-color: #d6978c;
+  color: #fff;
+  width: 100%;
+  height: 60px;
 }
 
 .t8-footer-default {
@@ -2229,7 +2230,7 @@ a:hover {
   }
 
   .t8-location-date-default {
-    left: 23%;
+    left: 30%;
   }
 
   .t8-location .container {
@@ -2247,11 +2248,11 @@ a:hover {
     color: var(--color-1);
   }
 
-  .t8-location-mid-add-update {
+  /* .t8-location-mid-add-update {
     width: 15px;
     height: 15px;
     margin-left: 1px;
-  }
+  } */
 
   .t8-location-mid-time {
     font-size: 14px;
@@ -2424,7 +2425,7 @@ a:hover {
     display: block;
     transform: rotate(-50deg);
     position: absolute;
-    top: -25%;
+    top: -50%;
     left: 20%;
   }
 
@@ -2743,6 +2744,7 @@ a:hover {
     padding-left: 2%;
     margin: 0 0;
     margin-top: 40px;
+    width: 100%;
   }
 
   .t8-contact-form .form-input {

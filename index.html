@@ -2344,6 +2344,7 @@
     </link>
     <script>
         var splide = null;
+        var isthamdu = true;
         document.addEventListener('DOMContentLoaded', function () {
             splide = new Splide('.splide', {
                 type: 'loop'
@@ -2359,7 +2360,7 @@
             }, 1000);
         }
         function closePopup(event) {
-            if (event!= null && event.target.localName != 'div') {
+            if (event != null && event.target.localName != 'div') {
                 return;
             }
             document.body.style.overflowY = 'auto';
@@ -2372,12 +2373,35 @@
             document.querySelector('#dialog-previewImage').style.display = 'flex';
             document.body.style.overflowY = 'hidden';
         }
+
+        function clickoption(value) {
+            isthamdu = (value == 1);
+            document.querySelector(`#count`).style.display = (value == 1) ? 'block' : 'none';
+            document.querySelector(`#phuongtien`).style.display = (value == 1) ? 'block' : 'none';
+
+            document.querySelector(`#option${value}`).classList.add('checked');
+            document.querySelector(`#option${value == 2 ? 1 : 2}`).classList.remove('checked');
+        }
+
+        function sendData() {
+            var name = document.querySelector('#input_name').value;
+            var songuoi = parseInt(document.querySelector('#id_field_sl').value);
+            var phuongtien = parseInt(document.querySelector('#id_field_pt').value);
+            fetch(`https://script.google.com/macros/s/AKfycbzRhBnBl5CFIKYfIOKTcQITw00H74kQxHsKVuFDWxlq31veVAWdp_bNR_3Kt1rYNf3O/exec?name_km=${encodeURI(name)}&tham_gia=${isthamdu ? 1 : 0}&count=${songuoi}&phuong_tien=${phuongtien}&time_send=${(new Date()).getTime()}`).then(function (response) {
+                alert('Cảm ơn bạn đã feedback!');
+            }).then(function (data) {
+                console.log(data);
+            }).catch(function (err) {
+                console.log('Fetch Error :-S', err);
+            });
+
+        }
         onReady(function () {
-            // setTimeout(() => {
-            document.querySelector('.pageMain').style.display = 'block';
-            document.querySelector('.pageMain').style.overflow = 'auto';
-            document.getElementById('loading').remove();
-            // }, 1000);
+            setTimeout(() => {
+                document.querySelector('.pageMain').style.display = 'block';
+                document.querySelector('.pageMain').style.overflow = 'auto';
+                document.getElementById('loading').remove();
+            }, 2000);
         });
 
         // Set the date we're counting down to
@@ -2567,11 +2591,9 @@
                                                 <p>Nguyễn Thị Làn</p>
                                             </div>
                                             <div class="paragraph">
-                                                <p>Mời cô dâu giới thiệu về bản thân ở đây nha. cô dâu có thể trả lời
-                                                    những câu hỏi cơ bản như tên đầy đủ là gì nè, bao tuổi rùi, nhà ở
-                                                    đâu, sở thích, ưu điểm, khuyết điểm, ...<br><br>Tất cả những gì mà
-                                                    cô dâu muốn chia sẻ về bản thân thì mời cô dâu hãy chia sẻ ở đây nha
-                                                    ♥</p>
+                                                <p>Cô gái tuổi Thân không hề nhỏ đầy mạnh mẽ.<br>
+                                                    Thích vui vẻ, náo nhiệt nhưng cũng yêu khoảnh khắc yên tĩnh 1 mình ♥
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -2590,12 +2612,10 @@
                                             <div class="name">
                                                 <p>Đỗ Văn Tuấn</p>
                                             </div>
-                                            <div class="paragraph">Đã có phần giới thiệu cô dâu rồi thì đương nhiên là
-                                                phải có phần giới thiệu chú rể chứ phải không ạ? Tương tự như cô dâu,
-                                                chú rể có thể giới thiệu đôi nét về bản thân mình ở đây nha.<br><br>Nhớ
-                                                là hãy chọn những bức ảnh thật đẹp để ở phần này nhá, vì phần đầu thiệp
-                                                rất quan trọng mà phải không ♥</div><img
-                                                src="./assets/img/theme/main-arrow-bottom.svg" class="arrow-bottom">
+                                            <div class="paragraph">Chàng trai tuổi Tuất khó tính, độc lập.<br>
+                                                Khi tập trung công việc thì không biết thế sự xung quanh kể cả nóc nhà
+                                                cũng bị bơ. ♥</div>
+                                            <img src="./assets/img/theme/main-arrow-bottom.svg" class="arrow-bottom">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-5 col-md-5 col-sm-12 col-12">
@@ -2623,12 +2643,6 @@
                                                 data-editable="true" class="video"></iframe></div>
                                         <div class="t8-main-video">
                                             <div class="title">Chuyện chúng mình</div>
-                                            <div class="paragraph">Mọi người có thể sử dụng đoạn này để kể lại đôi nét
-                                                về câu chuyện tình yêu của các bạn nha. Hai bạn yêu nhau ra sao, quen
-                                                nhau thế nào, có những kỷ niệm nào đáng nhớ, ... mọi thứ đều có thể kể
-                                                lại thông qua widget này đó. ♥<br><br>Kể dài một chút thì text sẽ vừa
-                                                với ảnh hơn, sẽ đẹp hơn nên mọi người ráng viết dài dài xíu trông cho
-                                                đẹp nhá heheee ♥</div>
                                         </div>
                                     </div>
                                 </div>
@@ -2658,13 +2672,11 @@
                                                             đầu tiên</div>
                                                     </div>
                                                 </div>
-                                                <div data-block-node="journey-point-content" class="t8-journey-text">Ở
-                                                    đây các bạn có thể thỏa thích ghi lại những ngày kỷ niệm đặc biệt
-                                                    của riêng các bạn nè. Ví dụ như ngày đầu gặp nhau, ngày đầu trộm
-                                                    "hun" má, lần đầu tiên cảm thấy vị ngọt của đôi môi, valentine đầu
-                                                    tiên, lần đầu tiên cãi vã, ...<br><br>Về cơ bản là ở đây là nơi mà
-                                                    các bạn đánh dấu lại các mốc thời gian đáng nhớ, viết thêm những
-                                                    dòng "sến sẩm" mùi mẫn để mọi người được ăn cơm tró no nê nhaaa ♥
+                                                <div data-block-node="journey-point-content" class="t8-journey-text">Là
+                                                    ngày đầu tiên nàng quay lại Hà Nội sau một thời gian dài làm việc ở
+                                                    nhà do dịch covid tại một nhà hàng với món ăn yêu
+                                                    thích của cả hai.<br>
+                                                    Và đó cũng là lần đầu tiên nàng cất tiếng gọi chàng là "Anh" ♥
                                                 </div>
                                             </div>
                                             <div data-block="journey-point" class="t8-journey-item">
@@ -2672,14 +2684,12 @@
                                                         src="./assets/img/theme/story-icon-heart.svg"
                                                         class="journey-icon"></div>
 
-                                                <div data-block-node="journey-point-content" class="t8-journey-text">Vẫn
-                                                    là những ngày kỷ niệm đặc biệt thôi, nhưng thay đổi vị trí ảnh để
-                                                    tấm Thiệp cưới Online của bạn thêm hài hòa, xinh xắn hơn. À mà các
-                                                    bạn đừng quên đăng những bức ảnh đánh dấu kỷ niệm thật đẹp nhé
-                                                    ♥<br><br>Các bạn có thể tùy chọn thêm bao nhiêu mốc thời gian cũng
-                                                    được, bằng cách tạo bản sao và di chuyển lên xuống giữa các mốc thời
-                                                    gian kỷ niệm. Rất đơn giản mà lại hiệu quả để ngồi "lục lại ký ức"
-                                                    phải không nào ♥</div>
+                                                <div data-block-node="journey-point-content" class="t8-journey-text">
+                                                    Chuyến đi đầu tiên
+                                                    Quay lại nơi đã từng đặt chân để trả lời hứa cho bản thân- Fansipan
+                                                    ♥<br>
+                                                    Một lòng háo hức mong chờ được ngắm cảnh tuyết rơi nhưng chỉ thấy
+                                                    sương mù với cái lạnh 1 độ thật đáng nhớ ♥</div>
                                                 <div class="t8-journey-box">
                                                     <div class="t8-journey-img"><img
                                                             src="./assets/img/theme/2205_w023_n001_2321b_p1_2321.jpg"
@@ -2696,7 +2706,7 @@
                                                         src="./assets/img/theme/story-icon-rings.svg"
                                                         class="journey-icon"></div>
                                                 <div class="t8-journey-box">
-                                                    <div class="t8-journey-img"><img
+                                                    <div class="t8-journey-img" style="background-color: #f19792;"><img
                                                             src="./assets/img/theme/19198017333.png" alt="">
                                                         <div data-block-node="journey-point-date" class="date">
                                                             04.06.2022</div>
@@ -2705,27 +2715,21 @@
                                                     </div>
                                                 </div>
                                                 <div data-block-node="journey-point-content" class="t8-journey-text">
-                                                    Ngoài những mốc thời gian mang tính chất "lần đầu tiên" ra thì các
-                                                    bạn cũng hoàn toàn có thể thêm vào những mốc kỷ niệm của riêng hai
-                                                    bạn, hoặc là những lần "suýt chia xa", nói chung là bất kỳ kỷ niệm
-                                                    gì cũng đều được hoan nghênh tại widget này ♥<br><br>Nắmtay có một
-                                                    lời khuyên nho nhỏ cho các bạn nữa là nếu được thì hãy viết dài một
-                                                    chút nhaaaa, viết dài ra thì trông cái chỗ này nó mới đẹp ấy mọi
-                                                    người ạ ♥</div>
+                                                    Say "Yes"!<br>
+                                                    Chuyến đi của nhiều kỷ niệm đáng nhớ: lần đầu tiên được lặn biển sờ
+                                                    ngắm san hô, lần đầu tiên bị dị ứng vì
+                                                    "tôm hùm" và khoảnh khắc ngỡ ngàng say "Yes" với chiếc nhân trên tay
+                                                    ♥</div>
                                             </div>
                                             <div data-block="journey-point" class="t8-journey-item">
                                                 <div data-block="decoration" data-decoration-id="4"><img
                                                         src="./assets/img/theme/story-icon-heart.svg"
                                                         class="journey-icon"></div>
 
-                                                <div data-block-node="journey-point-content" class="t8-journey-text">Vẫn
-                                                    là những ngày kỷ niệm đặc biệt thôi, nhưng thay đổi vị trí ảnh để
-                                                    tấm Thiệp cưới Online của bạn thêm hài hòa, xinh xắn hơn. À mà các
-                                                    bạn đừng quên đăng những bức ảnh đánh dấu kỷ niệm thật đẹp nhé
-                                                    ♥<br><br>Các bạn có thể tùy chọn thêm bao nhiêu mốc thời gian cũng
-                                                    được, bằng cách tạo bản sao và di chuyển lên xuống giữa các mốc thời
-                                                    gian kỷ niệm. Rất đơn giản mà lại hiệu quả để ngồi "lục lại ký ức"
-                                                    phải không nào ♥</div>
+                                                <div data-block-node="journey-point-content" class="t8-journey-text">Sau
+                                                    nhiều lần bị chê vô tâm, chàng đã âm thầm chuẩn bị buổi kỷ niệm sinh
+                                                    nhật muộn một cách bất ngờ và đầy sự xinh đẹp.<br>
+                                                    Một chiếc sanh thần tuổi 31 hạnh phúc ♥</div>
                                                 <div class="t8-journey-box">
                                                     <div class="t8-journey-img"><img
                                                             src="./assets/img/theme/6094451.jpg" alt="">
@@ -2791,52 +2795,40 @@
 
                                 <div data-block="album" class="t8-list-img">
 
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(0)"><img
+                                    <div class="nt-album-item" onclick="openPopup(0)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-1.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(1)"><img
+                                    <div class="nt-album-item" onclick="openPopup(1)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-2.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(2)"><img
+                                    <div class="nt-album-item" onclick="openPopup(2)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-3.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(3)"><img
+                                    <div class="nt-album-item" onclick="openPopup(3)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-4.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(4)"><img
+                                    <div class="nt-album-item" onclick="openPopup(4)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-5.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(5)"><img
+                                    <div class="nt-album-item" onclick="openPopup(5)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-6.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(6)"><img
+                                    <div class="nt-album-item" onclick="openPopup(6)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-7.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(7)"><img
+                                    <div class="nt-album-item" onclick="openPopup(7)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-8.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(8)"><img
+                                    <div class="nt-album-item" onclick="openPopup(8)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-9.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(9)"><img
+                                    <div class="nt-album-item" onclick="openPopup(9)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-10.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(10)"><img
+                                    <div class="nt-album-item" onclick="openPopup(10)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-11.jpeg">
                                     </div>
-                                    <div class="nt-album-item"
-                                        onclick="openPopup(11)"><img
+                                    <div class="nt-album-item" onclick="openPopup(11)"><img
                                             src="./assets/img/theme/AnhCuoi/gallery-12.jpeg">
                                     </div>
                                 </div>
@@ -2971,36 +2963,120 @@
                                         <div class="t8-contact-text">
                                             <div class="title">Bạn sẽ đến chứ ?</div>
                                             <div class="paragraph">Chúng tôi rất chờ đón sự kiện trọng đại này của cuộc
-                                                đời, dù phải trì hoãn rất nhiều lần. Đám cưới của chúng tôi sẽ trọn vẹn
-                                                hơn khi có thêm lời chúc phúc và sự hiện diện của các bạn. Xin hãy xác
-                                                nhận sự có mặt của mình để chúng tôi chuẩn bị đón tiếp một cách chu đáo
-                                                nhất nhé! Trân trọng!</div>
+                                                đời, dù phải trì hoãn rất nhiều lần. Sự hiện diện của quý anh chị em bạn
+                                                bè là kinh tế của chúng em ạ, đi đi nhá!</div>
                                         </div>
                                         <div class="form">
-                                            <form method="post" class="t8-contact-form">
+                                            <div class="t8-contact-form">
                                                 <div class="t8-form-group">
-                                                    <p class="form-title">Tên của bạn</p><input type="text"
-                                                        placeholder="Khánh Vy - Bạn cấp 3" required=""
-                                                        class="form-input">
-                                                </div>
-                                                <div class="t8-form-group">
-                                                    <p class="form-title">Số điện thoại</p><input type="tel"
-                                                        placeholder="VD: 0912345678"
-                                                        pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b" required=""
+                                                    <p class="form-title">Tên của bạn</p><input id="input_name"
+                                                        type="text" placeholder="Khánh Vy - Bạn cấp 3" required=""
                                                         class="form-input">
                                                 </div>
                                                 <div class="t8-form-group">
                                                     <p class="form-title">Bạn sẽ tham gia chứ ?<span
                                                             id="i6vhk6">*</span></p>
-                                                    <div class="form-btn-row"><input id="yes" type="radio" value="yes"
-                                                            name="rsvp" required="" class="form-radio"><label for="yes"
-                                                            class="form-btn">Có</label><input id="no" type="radio"
-                                                            value="no" name="rsvp" required="" class="form-radio"><label
-                                                            for="no" class="form-btn" id="i0n5sl">Không</label></div>
+                                                    <div class="box-invite mt-40">
+                                                        <div class="box-icon-ts">
+                                                            <div class="wrapper-ts-boxp">
+                                                                <label id="option1" onclick="clickoption(1)"
+                                                                    for="option-1boxp"
+                                                                    class="optionboxp option-1boxp activep checked">
+                                                                    <div class="dot">
+                                                                        <svg id="Layer_1" data-name="Layer 1"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 149.41 149.42">
+                                                                            <path
+                                                                                d="M149.38,57.22c-.23.29-.45.6-.7.87a2.91,2.91,0,0,1-5.11-1.57,11.82,11.82,0,0,1,0-1.46q0-18.3,0-36.61A12.08,12.08,0,0,0,138.83,8.3a12.69,12.69,0,0,0-8.05-2.43H18.49a12.47,12.47,0,0,0-8,2.5,12,12,0,0,0-4.62,10q0,14.65,0,29.32v83.13c0,5.13,2,9.1,6.7,11.5a12.36,12.36,0,0,0,5.64,1.21q56.51,0,113,0c5.91,0,10.3-3.3,11.87-8.82a14.39,14.39,0,0,0,.47-4q0-22.68,0-45.36a3,3,0,0,1,2.16-3.21c1.31-.38,2.45.16,3.39,1.59a4,4,0,0,0,.28.32v50.47c-.91,7.34-5.24,11.86-11.93,14.42a12.22,12.22,0,0,1-4.45.59q-58.32,0-116.64,0c-7.78,0-14.59-6.38-16.19-13.19a15,15,0,0,1-.3-3.48c0-38.78.05-77.57,0-116.35C-.2,7.92,7.55.94,13.32.25A4.52,4.52,0,0,0,15.18,0h119c6.56.66,10.95,4.34,13.88,10a14.16,14.16,0,0,1,1.29,5.14Z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M149.38,71.51c-1.27,1.93-2.54,2.53-4,1.85a2.8,2.8,0,0,1-1.79-2.88,2.77,2.77,0,0,1,2.16-2.61A2.71,2.71,0,0,1,148.79,69c.2.26.39.54.59.8Z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M73.49,109.55a35.79,35.79,0,0,1-21.18-7.71c-1-.78-1.93-1.63-2.85-2.49a3,3,0,0,1-.4-4.38,2.86,2.86,0,0,1,4.29,0,30.79,30.79,0,0,0,8.84,6c11.59,4.8,22.32,3.34,32.13-4.54.53-.42,1-.91,1.53-1.35,1.65-1.41,3.31-1.45,4.51-.1s.93,3-.58,4.48a39.44,39.44,0,0,1-7.71,5.68C86.81,108.17,79,110,73.49,109.55Z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M37.06,62.55a12.25,12.25,0,0,1,24.46-.06c.13,2-.9,3.37-2.63,3.54s-2.9-.86-3.19-2.8c-.59-3.87-2.57-6.08-5.68-6.34a6.31,6.31,0,0,0-7.13,6C42.73,64.67,42,65.7,40.56,66,38.42,66.4,37,65,37.06,62.55Z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M112.33,62.63c0,2-1,3.34-2.72,3.43S106.68,65,106.49,63a6.3,6.3,0,0,0-6-6.09c-3.48-.15-6,2-6.61,5.59,0,.1,0,.19-.06.29-.41,2.51-1.55,3.57-3.5,3.25S87.6,64.13,88,61.69c1-6.28,5.63-10.67,12-10.78A12.14,12.14,0,0,1,112.33,62.63Z">
+                                                                            </path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span>Tham Dự</span>
+                                                                </label>
+
+                                                                <label id="option2" onclick="clickoption(2)"
+                                                                    class="optionboxp option-3boxp">
+                                                                    <div class="dot">
+                                                                        <svg id="Layer_1" data-name="Layer 1"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 149.41 149.42">
+
+                                                                            <path
+                                                                                d="M149.37,84.06v50.47c-.91,7.34-5.24,11.86-11.92,14.42a12.28,12.28,0,0,1-4.45.59q-58.32,0-116.64,0c-7.78,0-14.59-6.38-16.2-13.19a15.54,15.54,0,0,1-.3-3.48c0-38.78.06-77.57,0-116.35C-.2,7.92,7.55.94,13.32.25A4.45,4.45,0,0,0,15.17,0h119c6.57.66,11,4.34,13.89,10a14.15,14.15,0,0,1,1.28,5.14v42c-.23.29-.44.6-.69.87a2.91,2.91,0,0,1-5.11-1.57,11.82,11.82,0,0,1,0-1.46q0-18.3,0-36.61a12.07,12.07,0,0,0-4.7-10.15,12.71,12.71,0,0,0-8.05-2.43H18.49a12.47,12.47,0,0,0-8,2.5,12.05,12.05,0,0,0-4.63,10q0,14.65,0,29.32v83.13c0,5.13,2,9.1,6.7,11.5a12.34,12.34,0,0,0,5.63,1.21q56.52,0,113,0c5.92,0,10.31-3.3,11.88-8.82a14.77,14.77,0,0,0,.47-4V85.36a3,3,0,0,1,2.17-3.21c1.31-.38,2.44.16,3.39,1.59A3.82,3.82,0,0,0,149.37,84.06Z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M149.37,69.76v1.75c-1.27,1.93-2.54,2.53-4,1.85a2.9,2.9,0,0,1,.37-5.49A2.7,2.7,0,0,1,148.78,69C149,69.22,149.18,69.5,149.37,69.76Z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M111.69,110c.34.41.31.6-.09.91-1.59,1.21-3.17,2.42-4.71,3.68-.62.51-.9.19-1.27-.26a33.12,33.12,0,0,0-7.86-7.08A34.25,34.25,0,0,0,75,101.8c-.74.08-.74.39-.64.92,1.56,9.09-5.37,19.33-15.92,20.7A18.78,18.78,0,0,1,37.19,107a14.27,14.27,0,0,1,0-1.85c-.14-3.6,1.27-6.73,3-9.7C44.3,88.68,49.67,83,55.38,77.58c.47-.45.69-.25,1,.08A88,88,0,0,1,70.23,93.57a2.12,2.12,0,0,0,2.46,1.11,39.09,39.09,0,0,1,17.47,1.09A41.93,41.93,0,0,1,111.69,110Zm-54.2,6c6.77-.89,12.34-9,8.21-15.84a79.88,79.88,0,0,0-9.83-12.69,65.71,65.71,0,0,0-9.35,11.87,11.09,11.09,0,0,0-2,5.68A11.39,11.39,0,0,0,57.49,116.07Z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M101.54,55.07A7.41,7.41,0,1,1,94.06,62,7.42,7.42,0,0,1,101.54,55.07Z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M63.2,62.28a7.36,7.36,0,1,1-7.33-7.21A7.4,7.4,0,0,1,63.2,62.28Z">
+                                                                            </path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span>Rất Tiếc</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="t8-form-group"><button class="form-btn-submit">Phản
+                                                <div id="count" class="t8-form-group">
+                                                    <p class="form-title">Số người tham dự ?</p>
+                                                    <div class="form-btn-row">
+                                                        <select id="id_field_sl" class="form-control2"
+                                                            name="thamdusonguoi">
+                                                            <option value="1">
+                                                                1 người
+                                                            </option>
+                                                            <option value="2">
+                                                                2 người
+                                                            </option>
+                                                            <option value="3">
+                                                                3 người
+                                                            </option>
+                                                            <option value="4">
+                                                                4 người
+                                                            </option>
+                                                            <option value="5">
+                                                                5 người
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div id="phuongtien" class="t8-form-group">
+                                                    <p class="form-title">Phương tiện đi lại ?</p>
+                                                    <div class="form-btn-row">
+                                                        <select id="id_field_pt" class="form-control2"
+                                                            name="select_pt_pt">
+                                                            <option value="0">
+                                                                Tự túc
+                                                            </option>
+                                                            <option value="1">
+                                                                Đi chung
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="t8-form-group"><button onclick="sendData()"
+                                                        class="form-btn-submit">Phản
                                                         hồi</button></div>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
