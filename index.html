@@ -2413,12 +2413,17 @@
             });
 
         }
+
+
         onReady(function () {
             setTimeout(() => {
                 document.querySelector('.pageMain').style.display = 'block';
                 document.querySelector('.pageMain').style.overflow = 'auto';
                 document.getElementById('loading').remove();
                 document.body.style.pointerEvents = 'auto';
+                (document.querySelector('#input_name')).addEventListener('input', () => {
+                    document.getElementById('sendDataSubmit').classList.remove("inactive");
+                });
             }, 1888);
         });
 
@@ -3096,7 +3101,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="t8-form-group">
-                                                        <button onclick="sendData()" class="form-btn-submit">Phản
+                                                        <button id="sendDataSubmit" onclick="sendData()"
+                                                            class="form-btn-submit inactive">Phản
                                                             hồi</button>
                                                     </div>
                                                 </div>
