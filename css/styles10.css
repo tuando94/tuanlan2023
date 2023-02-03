@@ -1263,7 +1263,7 @@ a:hover {
   height: 13px;
   background-color: var(--color-1);
   border-radius: 50%;
-  left: 49.6%;
+  left: 49.5%;
   z-index: 1;
   top: 33px;
 }
@@ -2682,7 +2682,7 @@ a:hover {
   }
 
   .event-icon {
-    left: 5.4%;
+    left: 5.5%;
   }
 
   .event-icon::after {
