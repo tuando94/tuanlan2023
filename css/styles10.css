@@ -136,6 +136,10 @@ a:hover {
 
 .t8-banner-time {
   font-size: 40px;
+  width: 250px;
+  border-radius: 5px;
+  border-top: 1.5px solid #c91a1a;
+  border-bottom: 1.5px solid #c91a1a;
   color: var(--color-1);
   font-family: var(--font-1);
   margin: 0 auto;
@@ -341,7 +345,7 @@ a:hover {
 .t8-story {
   background-color: var(--color-3);
   height: auto;
-  padding: 200px 0;
+  padding: 160px 0;
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -496,12 +500,12 @@ a:hover {
 }
 
 .main-bride {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .arrow-top {
   position: absolute;
-  top: -160px;
+  top: -127px;
   left: -150px;
 }
 
@@ -549,7 +553,7 @@ a:hover {
 .t8-video {
   margin: 0 auto;
   background-color: var(--color-3);
-  padding-bottom: 160px;
+  padding-bottom: 40px;
   width: 100vw;
 }
 
@@ -588,7 +592,7 @@ a:hover {
 .t8-journey {
   background-color: var(--color-4);
   height: auto;
-  padding: 150px 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 
@@ -797,7 +801,7 @@ a:hover {
 }
 
 .t8-journey-content {
-  margin-top: 18%;
+  margin-top: 15%;
   flex: 0 0 100%;
   max-width: 100%;
   position: relative;
@@ -920,7 +924,7 @@ a:hover {
 .t8-journey {
   background-color: var(--color-4);
   height: auto;
-  padding: 150px 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 
@@ -1097,7 +1101,7 @@ a:hover {
 }
 
 .t8-journey-content {
-  margin-top: 18%;
+  margin-top: 15%;
   flex: 0 0 100%;
   max-width: 100%;
   position: relative;
@@ -1221,9 +1225,9 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
-  padding: 100px 0;
+  padding: 50px 0;
   background-color: var(--color-2);
-  padding-bottom: 200px;
+  padding-bottom: 180px;
 }
 
 .t8-event .container {
@@ -1507,7 +1511,7 @@ a:hover {
   height: 60px;
   opacity: 1;
 }
-.t8-form-group .inactive{
+.t8-form-group .inactive {
   opacity: 0.6;
   pointer-events: none;
 }
@@ -1763,7 +1767,7 @@ a:hover {
   }
 
   .t8-story {
-    padding-bottom: 70px;
+    padding-bottom: 40px;
   }
 
   .t8-groom-text .paragraph,
@@ -1847,7 +1851,7 @@ a:hover {
   }
 
   .t8-video {
-    padding-bottom: 80px;
+    padding-bottom: 30px;
   }
 
   .t8-video-top {
@@ -2203,6 +2207,7 @@ a:hover {
 
   .t8-banner-time {
     font-size: 25px;
+    width: 160px;
   }
 
   .banner-icon-3-decor3 {
@@ -2334,7 +2339,7 @@ a:hover {
   }
 
   .t8-row-br {
-    margin: 50px auto;
+    margin: 10px auto;
   }
 
   .icon-ring-mb {
@@ -2379,7 +2384,7 @@ a:hover {
   }
 
   .t8-story {
-    padding: 140px 0;
+    padding: 40px 0;
   }
 
   .arrow-top {
@@ -2400,7 +2405,7 @@ a:hover {
     width: 130px;
     transform: rotate(-50deg);
     position: absolute;
-    top: -5%;
+    top: -10%;
     left: 50%;
     display: block;
   }
@@ -2438,7 +2443,7 @@ a:hover {
     display: block;
     transform: rotate(-50deg);
     position: absolute;
-    top: -50%;
+    top: -42%;
     left: 20%;
   }
 
@@ -2476,7 +2481,7 @@ a:hover {
   }
 
   .t8-journey {
-    padding: 50px 0;
+    padding: 20px 0;
   }
 
   .t8-journey-img img {
@@ -2615,7 +2620,7 @@ a:hover {
   }
 
   .t8-event {
-    padding: 50px 0;
+    padding: 20px 0;
     padding-bottom: 300px;
   }
 

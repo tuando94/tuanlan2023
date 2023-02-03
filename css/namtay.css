@@ -6,8 +6,8 @@
 }
 .loader {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   margin: 75px;
   display: inline-block;
@@ -78,8 +78,8 @@
 }
 @-webkit-keyframes star-fly-out {
   0% {
-    top: 39px;
-    left: 39px;
+    top: 50px;
+    left: 50px;
   }
   100% {
   }
@@ -87,8 +87,8 @@
 
 @keyframes star-fly-out {
   0% {
-    top: 39px;
-    left: 39px;
+    top: 50px;
+    left: 50px;
   }
   100% {
   }
