@@ -1286,7 +1286,7 @@ a:hover {
 }
 
 .t8-event-time .wr {
-  width: 160px;
+  width: 130px;
   float: right;
 }
 
@@ -1296,13 +1296,18 @@ a:hover {
 }
 
 .t8-event-time div {
-  font-size: 30px;
+  /* font-size: 30px;
   font-family: var(--font-2);
   color: var(--color-1);
-  word-spacing: 100vw;
+  word-spacing: 100vw; */
   text-align: left;
 }
-
+.t8-event-content .time {
+  font-size: 30px;
+  font-family: var(--font-3);
+  color: var(--color-1);
+  text-align: left;
+}
 .t8-event-content .title {
   font-size: 48px;
   font-family: var(--font-1);
@@ -1689,6 +1694,10 @@ a:hover {
 
 :root {
   --font-2: "Roboto";
+}
+
+:root {
+  --font-3: "Lexend Deca";
 }
 
 #invitation {
@@ -2673,7 +2682,7 @@ a:hover {
   }
 
   .event-icon {
-    left: 8.4%;
+    left: 5.4%;
   }
 
   .event-icon::after {
@@ -2710,11 +2719,18 @@ a:hover {
     padding-left: 20%;
     padding-right: 10%;
   }
-
+  .count-down-wrap .time-left {
+    height: 105px;
+    width: 80px;
+    padding: 10px 5px;
+    font-size: 38px;
+  }
   .t8-event-content .title {
     font-size: 20px;
   }
-
+  .t8-event-content .time {
+    font-size: 20px;
+  }
   .t8-event-content .address,
   .t8-event-content .home {
     font-size: 14px;
