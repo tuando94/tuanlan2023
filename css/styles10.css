@@ -268,14 +268,14 @@ a:hover {
 }
 
 .t8-location-mid-hope {
-  font-size: 30px;
+  font-size: 35px;
   max-width: 800px;
   font-family: var(--font-1);
   color: var(--color-1);
 }
 
 .t8-location-mid-add {
-  font-size: 20px;
+  font-size: 24px;
   display: flex;
   font-family: var(--font-2);
   color: var(--color-1);
@@ -1447,7 +1447,7 @@ a:hover {
 }
 
 .t8-form-group {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .t8-form-group .form-title {
@@ -1652,7 +1652,7 @@ a:hover {
 .form-btn-row {
   height: auto;
   display: block;
-  margin-top: 1.2rem;
+  margin-top: 3px;
 }
 
 #i7f1f {

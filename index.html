@@ -2368,13 +2368,13 @@
         }
 
         function openPopup(index) {
-            let arr = [1,2,3,4,5,6,7,8,9,10,11,12];
-            let arr1 = arr.splice(index,12 - index);
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+            let arr1 = arr.splice(index, 12 - index);
             let arr2 = arr1.concat(arr);
             splide.go(`-1`);
             let listSlide = document.querySelectorAll('.listIMG');
             listSlide.forEach(function (item, i) {
-               item.src = `./assets/img/theme/AnhCuoi/gallery-${arr2[i]}.jpeg`;
+                item.src = `./assets/img/theme/AnhCuoi/gallery-${arr2[i]}.jpeg`;
             });
             // src = `./assets/img/theme/AnhCuoi/gallery-${index + 1}.jpeg`;
             document.querySelector('#dialog-previewImage').style.display = 'flex';
@@ -2419,7 +2419,7 @@
                 document.querySelector('.pageMain').style.overflow = 'auto';
                 document.getElementById('loading').remove();
                 document.body.style.pointerEvents = 'auto';
-            }, 1000);
+            }, 1888);
         });
 
         // Set the date we're counting down to
@@ -2459,34 +2459,28 @@
             <!---->
             <div id="__layout">
                 <div class="ws">
+                    <!-- <div class="loading2"  >
+                        <div class="loader loader-13">
+                            <div class="css-heart heart1"></div>
+                            <div class="css-heart heart2"></div>
+                            <div class="css-heart heart3"></div>
+                            <div class="css-heart heart4"></div>
+                        </div>
+                    </div> -->
                     <div id="loading" class="loading" data-v-c2d30ec0="">
-                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                            class="v-progress-circular v-progress-circular--visible v-progress-circular--indeterminate"
-                            style="height:200px;width:200px;color:#ea7573;caret-color:#ea7573;" data-v-c2d30ec0=""><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="21.62162162162162 21.62162162162162 43.24324324324324 43.24324324324324"
-                                style="transform:rotate(0deg);">
-                                <circle fill="transparent" cx="43.24324324324324" cy="43.24324324324324" r="20"
-                                    stroke-width="3.243243243243243" stroke-dasharray="125.664"
-                                    stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay">
-                                </circle>
-                            </svg>
-                            <div class="v-progress-circular__info"></div>
+                        <div class="loader loader-13">
+                            <div class="css-heart heart1"></div>
+                            <div class="css-heart heart2"></div>
+                            <div class="css-heart heart3"></div>
+                            <div class="css-heart heart4"></div>
                         </div>
                     </div>
                     <div id="loading2" class="loading2" style="display: none;">
-                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                            class="v-progress-circular v-progress-circular--visible v-progress-circular--indeterminate"
-                            style="height:200px;width:200px;color:#ea7573;caret-color:#ea7573;" data-v-c2d30ec0=""><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="21.62162162162162 21.62162162162162 43.24324324324324 43.24324324324324"
-                                style="transform:rotate(0deg);">
-                                <circle fill="transparent" cx="43.24324324324324" cy="43.24324324324324" r="20"
-                                    stroke-width="3.243243243243243" stroke-dasharray="125.664"
-                                    stroke-dashoffset="125.66370614359172px" class="v-progress-circular__overlay">
-                                </circle>
-                            </svg>
-                            <div class="v-progress-circular__info"></div>
+                        <div class="loader loader-13">
+                            <div class="css-heart heart1"></div>
+                            <div class="css-heart heart2"></div>
+                            <div class="css-heart heart3"></div>
+                            <div class="css-heart heart4"></div>
                         </div>
                     </div>
                     <div class="pageMain">
@@ -2501,9 +2495,12 @@
                                     </div>
                                     <div data-block="decoration" data-decoration-id="4"><img
                                             src="./assets/img/theme/banner-heart.svg" class="banner-heart"> <img
-                                            src="./assets/img/theme/banner-icon1.png" class="banner-icon-1"> <img
-                                            src="./assets/img/theme/banner-icon2.png" class="banner-icon-2"> <img
-                                            src="./assets/img/theme/banner-icon3.png" class="banner-icon-3"></div>
+                                            src="./assets/img/theme/banner-icon1.png"
+                                            class="banner-icon-1 anomation-move1"> <img
+                                            src="./assets/img/theme/banner-icon2.png"
+                                            class="banner-icon-2 anomation-move2"> <img
+                                            src="./assets/img/theme/banner-icon3.png"
+                                            class="banner-icon-3 anomation-move"></div>
                                 </div>
                                 <div class="t8-banner-notified text-center">
                                     <p>Chúng tôi cưới</p>
@@ -2550,7 +2547,7 @@
                                         </div>
                                         <div class="t8-location-mid">
                                             <div class="t8-location-mid-time">
-                                                <p>Tiệc cưới sẽ diễn ra vào hồi 10 giờ 30 phút</p>
+                                                <p>tới dự tiệc cưới của chúng tôi vào lúc 10 giờ 30 phút</p>
                                             </div>
                                             <div class="t8-location-img">
                                                 <div data-block="decoration" data-decoration-id="4"><img
@@ -2582,7 +2579,7 @@
                                     </div>
                                 </div>
                             </section>
-                    
+
                             <section data-widget="bio" class="t8-story">
                                 <div class="container" id="i7f1f">
                                     <div class="row main-bride">
@@ -2610,7 +2607,8 @@
                                                 </div>
                                                 <div class="paragraph">
                                                     <p>Cô gái tuổi Thân không hề nhỏ và đầy mạnh mẽ.<br>
-                                                        Thích vui vẻ, náo nhiệt nhưng cũng yêu những khoảnh khắc tĩnh lặng 1 mình ♥
+                                                        Thích vui vẻ, náo nhiệt nhưng cũng yêu những khoảnh khắc tĩnh
+                                                        lặng 1 mình ♥
                                                     </p>
                                                 </div>
                                             </div>
@@ -2632,7 +2630,8 @@
                                                     <p>Đỗ Văn Tuấn</p>
                                                 </div>
                                                 <div class="paragraph">Chàng trai tuổi Tuất khó tính và độc lập.<br>
-                                                    Khi tập trung công việc thì không biết đến thế sự xung quanh kể cả nóc nhà cũng bị ăn bơ ♥</div>
+                                                    Khi tập trung công việc thì không biết đến thế sự xung quanh kể cả
+                                                    nóc nhà cũng bị ăn bơ ♥</div>
                                                 <img src="./assets/img/theme/main-arrow-bottom.svg"
                                                     class="arrow-bottom">
                                             </div>
@@ -2665,8 +2664,10 @@
                                                     data-editable="true" class="video"></iframe></div>
                                             <div class="t8-main-video">
                                                 <div class="title">Chuyện chúng mình</div>
-                                                <div class="paragraph">Từ ghét đến yêu, từ chị thành em, từ người dưng thành người thương, từ xa lạ thành người thân.<br>
-                                                Tất cả đều được dẫn dắt bởi 1 cảm xúc mà chúng mình gọi là "Cảm giác gia đình" ♥</div>
+                                                <div class="paragraph"> Từ ghét đến yêu, từ chị thành em, từ người dưng
+                                                    thành người thương, từ xa lạ thành người thân.
+                                                    Tất cả đều được dẫn dắt bởi 1 cảm xúc mà chúng mình gọi là "Cảm giác
+                                                    gia đình" ♥</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2698,7 +2699,8 @@
                                                         </div>
                                                     </div>
                                                     <div data-block-node="journey-point-content"
-                                                        class="t8-journey-text">Là ngày đầu tiên nàng quay lại Hà Nội sau một thời gian dài làm việc ở nhà do dịch covid<br>
+                                                        class="t8-journey-text">Là ngày đầu tiên nàng quay lại Hà Nội
+                                                        sau một thời gian dài làm việc ở nhà do dịch covid.<br>
                                                         Là một nhà hàng với món ăn yêu thích của cả hai.<br>
                                                         Là lần đầu tiên nàng cất tiếng gọi chàng là "Anh" ♥
                                                     </div>
@@ -2710,8 +2712,10 @@
 
                                                     <div data-block-node="journey-point-content"
                                                         class="t8-journey-text">
-                                                        Quay lại nơi đã từng đặt chân để trả lời hẹn cho bản thân- Fansipan ♥<br>
-                                                        Một lòng háo hức mong chờ cảnh tuyết rơi nhưng chỉ thấy sương mù với cái lạnh 1 độ kinh người. ♥</div>
+                                                        Quay lại nơi đã từng đặt chân để trả lời hẹn cho bản thân-
+                                                        Fansipan ♥<br>
+                                                        Một lòng háo hức mong chờ cảnh tuyết rơi nhưng chỉ thấy sương mù
+                                                        với cái lạnh 1 độ kinh người. ♥</div>
                                                     <div class="t8-journey-box">
                                                         <div class="t8-journey-img"><img
                                                                 src="./assets/img/theme/2205_w023_n001_2321b_p1_2321.jpg"
@@ -2720,7 +2724,7 @@
                                                                 01.01.2022</div>
                                                             <div data-block-node="journey-point-name" class="title">Sapa
                                                                 -
-                                                                Sương mù - Chuyến đi đầu tiên</div>
+                                                                Sương mù<br>Chuyến đi đầu tiên</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2730,7 +2734,7 @@
                                                             class="journey-icon"></div>
                                                     <div class="t8-journey-box">
                                                         <div class="t8-journey-img" style="background-color: #f19792;">
-                                                            <img src="./assets/img/theme/19198017333.png" alt="">
+                                                            <img src="" alt="">
                                                             <div data-block-node="journey-point-date" class="date">
                                                                 04.06.2022</div>
                                                             <div data-block-node="journey-point-name" class="title">Nha
@@ -2739,8 +2743,10 @@
                                                     </div>
                                                     <div data-block-node="journey-point-content"
                                                         class="t8-journey-text">
-                                                        Chuyến đi của nhiều kỷ niệm đáng nhớ: lần đầu tiên được lặn biển sờ ngắm san hô, lần đầu tiên bị dị ứng "tôm hùm", lần
-                                                        đầu tiên được ăn nem nướng đúng điệu "ngọt" và khoảnh khắc ngỡ ngàng say "Yes" với chiếc nhẫn trên tay ♥</div>
+                                                        Chuyến đi của nhiều kỷ niệm đáng nhớ: lần đầu tiên được lặn biển
+                                                        sờ ngắm san hô, lần đầu tiên bị dị ứng "tôm hùm", lần
+                                                        đầu tiên được ăn nem nướng đúng "ngọt" và khoảnh khắc ngỡ ngàng
+                                                        say "Yes" với chiếc nhẫn trên tay ♥</div>
                                                 </div>
                                                 <div data-block="journey-point" class="t8-journey-item">
                                                     <div data-block="decoration" data-decoration-id="4"><img
@@ -2882,7 +2888,8 @@
                                                     </div>
                                                     <div class="event-icon"></div>
                                                     <div class="t8-event-content">
-                                                        <div data-block-node="timemark-name" class="title">Đón Khách và chụp ảnh</div>
+                                                        <div data-block-node="timemark-name" class="title">Đón Khách và
+                                                            chụp ảnh</div>
                                                         <!-- <a data-block-node="timemark-address"
                                                             href="https://g.page/vienhuyethoc?share" target="_blank"
                                                             class="home">Nhà trai</a>
@@ -2899,63 +2906,66 @@
                                                     </div>
                                                     <div class="event-icon"></div>
                                                     <div class="t8-event-content">
-                                                        <div data-block-node="timemark-name" class="title">Tổ Chức Lễ Thành Hôn
-                                                        <!-- </div><a data-block-node="timemark-address"
+                                                        <div data-block-node="timemark-name" class="title">Tổ Chức Lễ
+                                                            Thành Hôn
+                                                            <!-- </div><a data-block-node="timemark-address"
                                                             href="https://g.page/vienhuyethoc?share" target="_blank"
                                                             class="home">Nhà trai</a>
                                                         <div data-block-node="timemark-content" class="address">47 Hàng
                                                             Bông, Hàng Gai, Hoàn Kiếm, Hà Nội</div> -->
-                                                    </div>
-                                                </div>
-                                                <div data-block="timemark" class="t8-event-item">
-                                                    <div class="t8-event-time">
-                                                        <div class="wr">
-                                                            <div data-block-node="timemark-datetime">11:00 05/03/2023
-                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="event-icon"></div>
-                                                    <div class="t8-event-content">
-                                                        <div data-block-node="timemark-name" class="title">Tham Gia Tiệc Mừng
-                                                        <!-- </div><a data-block-node="timemark-address"
+                                                    <div data-block="timemark" class="t8-event-item">
+                                                        <div class="t8-event-time">
+                                                            <div class="wr">
+                                                                <div data-block-node="timemark-datetime">11:00
+                                                                    05/03/2023
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event-icon"></div>
+                                                        <div class="t8-event-content">
+                                                            <div data-block-node="timemark-name" class="title">Tham Gia
+                                                                Tiệc Mừng
+                                                                <!-- </div><a data-block-node="timemark-address"
                                                             href="https://g.page/vienhuyethoc?share" target="_blank"
                                                             class="home">Nhà gái</a>
                                                         <div data-block-node="timemark-content" class="address">số 4 Tôn
                                                             Thất Thuyết, Dịch Vọng Hậu, Cầu Giấy</div> -->
-                                                    </div>
-                                                </div>
-                                            </div><i class="bx bxs-heart icon-heart"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="count-time-date mt-80 t8-gallery-title" style="margin-top: 100px;">
-                                    <div>
-                                        <h4 class="text-center">Mình cùng đếm ngược thời gian</h4>
-                                    </div>
-
-                                    <div class="box-time text-center">
-                                        <div class="count-down-wrap">
-                                            <div class="count-down-inner">
-                                                <div class="day-left time-left">
-                                                    <span id="countday" class="num">00</span>
-                                                    <span class="count-label">Ngày</span>
-                                                </div>
-                                                <div class="hour-left time-left">
-                                                    <span id="counthour" class="num">00</span>
-                                                    <span class="count-label">Giờ</span>
-                                                </div>
-                                                <div class="minute-left time-left">
-                                                    <span id="countmin" class="num">00</span>
-                                                    <span class="count-label">Phút</span>
-                                                </div>
-                                                <div class="second-left time-left">
-                                                    <span id="countsecond" class="num">00</span>
-                                                    <span class="count-label">Giây</span>
+                                                            </div>
+                                                        </div>
+                                                    </div><i class="bx bxs-heart icon-heart"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                        <div class="count-time-date mt-80 t8-gallery-title" style="margin-top: 100px;">
+                                            <div>
+                                                <h4 class="text-center">Mình cùng đếm ngược thời gian</h4>
+                                            </div>
+
+                                            <div class="box-time text-center">
+                                                <div class="count-down-wrap">
+                                                    <div class="count-down-inner">
+                                                        <div class="day-left time-left">
+                                                            <span id="countday" class="num">00</span>
+                                                            <span class="count-label">Ngày</span>
+                                                        </div>
+                                                        <div class="hour-left time-left">
+                                                            <span id="counthour" class="num">00</span>
+                                                            <span class="count-label">Giờ</span>
+                                                        </div>
+                                                        <div class="minute-left time-left">
+                                                            <span id="countmin" class="num">00</span>
+                                                            <span class="count-label">Phút</span>
+                                                        </div>
+                                                        <div class="second-left time-left">
+                                                            <span id="countsecond" class="num">00</span>
+                                                            <span class="count-label">Giây</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                             </section>
                             <div class="wr-connector">
                                 <section data-widget="rsvp" class="t8-contact"
