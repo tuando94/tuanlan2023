@@ -1638,6 +1638,8 @@ a:hover {
   z-index: 200;
   right: -2.2rem;
   top: 2.5rem;
+  -webkit-animation: customAni1 1.5s ease alternate infinite;
+  animation: customAni1 1.5s ease alternate infinite;
 }
 
 .money2 {
@@ -1645,6 +1647,8 @@ a:hover {
   z-index: 300;
   left: 0;
   top: 2.5rem;
+  -webkit-animation: customAni2 1.5s ease alternate infinite;
+  animation: customAni2 1.5s ease alternate infinite;
 }
 
 .money3 {
@@ -1652,6 +1656,8 @@ a:hover {
   z-index: 200;
   left: 0rem;
   top: 3.7rem;
+  -webkit-animation: customAni3 1.5s ease alternate infinite;
+  animation: customAni3 1.5s ease alternate infinite;
 }
 
 .front:hover ~ .back {
@@ -1686,6 +1692,39 @@ a:hover {
   transform: translateY(0.2rem) translateX(-50%);
 }
 
+@keyframes customAni1 {
+  0% {
+    transform: rotateZ(-50deg) scale(0.5);
+    z-index: 200;
+  }
+
+  100% {
+    z-index: 600;
+    transform: translateY(-3rem) translateX(0rem) rotateZ(3deg) scale(1);
+  }
+}
+@keyframes customAni2 {
+  0% {
+    transform: rotateZ(-40deg) scale(0.5);
+    z-index: 300;
+  }
+
+  100% {
+    z-index: 700;
+    transform: translateY(-4rem) translateX(-0.2rem) rotateZ(-3deg) scale(1);
+  }
+}
+@keyframes customAni3 {
+  0% {
+    transform: rotateZ(50deg) scale(0.5);
+    z-index: 200;
+  }
+
+  100% {
+    z-index: 600;
+    transform: translateY(-4.6rem) translateX(-2.5rem) rotateZ(-1deg) scale(1);
+  }
+}
 .form-btn-row {
   height: auto;
   display: block;
@@ -2201,14 +2240,14 @@ a:hover {
     padding-bottom: 60px;
   }
 
-.dialogtitile h3 { 
+  .dialogtitile h3 {
     font-size: 18px;
     font-weight: 500;
-}
-.dialogtitile {
+  }
+  .dialogtitile {
     margin-bottom: 10px;
     margin-top: 25px;
-}
+  }
   .banner-bride .name,
   .banner-groom .name {
     font-size: 60px;
