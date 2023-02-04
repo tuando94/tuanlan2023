@@ -2202,6 +2202,14 @@ a:hover {
     padding-bottom: 60px;
   }
 
+.dialogtitile h3 { 
+    font-size: 18px;
+    font-weight: 500;
+}
+.dialogtitile {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
   .banner-bride .name,
   .banner-groom .name {
     font-size: 60px;

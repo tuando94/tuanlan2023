@@ -2457,7 +2457,15 @@
                 document.getElementById("countsecond").innerHTML = 0;
             }
         }, 1000);
+        function showDialogDonate() {
+            document.querySelector(`#popupQR`).style.display = 'flex';
+            disableScroll();
+        }
 
+        function hideDialogDonate() {
+            document.querySelector(`#popupQR`).style.display = 'none';
+            enableScroll();
+        }
         function disableScroll() {
             document.body.style.overflowY = 'hidden';
             document.querySelector(`html`).style.overflowY = 'hidden';
@@ -2476,14 +2484,57 @@
             <!---->
             <div id="__layout">
                 <div class="ws">
-                    <!-- <div class="loading2"  >
-                        <div class="loader loader-13">
-                            <div class="css-heart heart1"></div>
-                            <div class="css-heart heart2"></div>
-                            <div class="css-heart heart3"></div>
-                            <div class="css-heart heart4"></div>
+                    <div id="popupQR" class="dialog" style="display: none;">
+                        <div class="content">
+                            <div class="card v-card">
+                                <button data-v-3a358218="" type="button"
+                                    class="close-btn v-btn v-btn--icon v-btn--round theme--light v-size--default" onclick="hideDialogDonate()">
+                                    <span class="v-btn__content">
+                                        <span data-v-3a358218="" aria-hidden="true"
+                                            class="v-icon notranslate theme--light">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img"
+                                                aria-hidden="true" class="v-icon__svg">
+                                                <path
+                                                    d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </button>
+                                <div>
+                                    <img style=" width: 100%; height: auto; "
+                                        src="https://ucarecdn.com/a43b6688-d4a7-410c-8fc8-33b3c6dcdffd/-/format/auto/-/preview/3000x3000/-/quality/lighter/r1%20_1_.png">
+
+                                </div>
+                                <div class="text-center dialogtitile">
+                                    <h3>Gửi lời chúc đến đôi uyên ương</h3>
+                                </div>
+                                <div class="stk text-center">
+                                    <span>
+                                        <b>ĐO VAN TUAN</b>
+                                    </span>
+                                    <br>
+                                    <div>
+                                        <span style="color: #4f3fa9; font-weight: bold; font-size: 19px;">TP</span><span
+                                            style="color: #7864e8; font-size: 18px;">Bank</span> - 0119 0219 001
+                                    </div>
+                                    <img style=" width: 100px; height: auto; " src="./assets/img/QR_Tuan.png">
+                                </div>
+                                <hr class="dotted">
+                                <div class="stk text-center">
+                                    <span>
+                                        <b>NGUYEN THI LAN</b>
+                                    </span>
+                                    <br>
+                                    <div>
+                                        <span style="color: #4f3fa9; font-weight: bold; font-size: 19px;">TP</span><span
+                                            style="color: #7864e8; font-size: 18px;">Bank</span> - 0046 4886 001
+                                    </div>
+                                    <img style=" width: 100px; height: auto; " src="./assets/img/QR_Lan.png">
+                                </div>
+                            </div>
                         </div>
-                    </div> -->
+                    </div>
                     <div id="loading" class="loading" data-v-c2d30ec0="">
                         <div class="loader loader-13">
                             <div class="css-heart heart1"></div>
@@ -2512,10 +2563,14 @@
                                     </div>
                                     <div data-block="decoration" data-decoration-id="4">
                                         <img src="./assets/img/theme/banner-heart.svg" class="banner-heart">
-                                        <img src="./assets/img/theme/banner-icon1.png" class="banner-icon-1 anomation-move1">
-                                        <img src="./assets/img/theme/banner-icon2.png" class="banner-icon-2 anomation-move2">
-                                        <img src="./assets/img/theme/banner-icon3.png" class="banner-icon-3 anomation-move">
-                                        <img src="./assets/img/theme/mau3/event-icon4-mau3.svg" class="banner-icon-4 anomation-move">
+                                        <img src="./assets/img/theme/banner-icon1.png"
+                                            class="banner-icon-1 anomation-move1">
+                                        <img src="./assets/img/theme/banner-icon2.png"
+                                            class="banner-icon-2 anomation-move2">
+                                        <img src="./assets/img/theme/banner-icon3.png"
+                                            class="banner-icon-3 anomation-move">
+                                        <img src="./assets/img/theme/mau3/event-icon4-mau3.svg"
+                                            class="banner-icon-4 anomation-move">
                                     </div>
                                 </div>
                                 <div class="t8-banner-notified text-center">
@@ -3196,7 +3251,8 @@
                                 </section>
                             </div>
                         </div>
-                        <div data-id="donate-fab" id="call-to-donate" style="bottom: 0px;"><a>
+                        <div data-id="donate-fab" id="call-to-donate" style="bottom: 0px;" onclick="showDialogDonate()">
+                            <a>
                                 <div class="sticky-btn-wrapper"><img src="./assets/img/theme/front.svg"
                                         class="front"><svg width="86" height="97" viewBox="0 0 86 97" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" class="sticky-btn-opener"></svg><img
@@ -3204,7 +3260,8 @@
                                         src="./assets/img/theme/button.svg" class="button"> <img
                                         src="./assets/img/money1.png" class="money1"> <img src="./assets/img/money2.png"
                                         class="money2"> <img src="./assets/img/money3.png" class="money3"></div>
-                            </a></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3228,7 +3285,6 @@
         <script data-n-head="ssr"
             src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"
             data-body="true"></script>
-
 </body>
 
 </html>
