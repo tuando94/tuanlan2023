@@ -2469,11 +2469,16 @@
         function disableScroll() {
             document.body.style.overflowY = 'hidden';
             document.querySelector(`html`).style.overflowY = 'hidden';
+            document.body.addEventListener('touchmove', preventDefault, { passive: false });
         }
 
         function enableScroll() {
             document.body.style.overflowY = 'auto';
             document.querySelector(`html`).style.overflowY = 'auto';
+            document.body.removeEventListener('touchmove', preventDefault);
+        }
+        function preventDefault(e) {
+            e.preventDefault();
         }
     </script>
 </head>
@@ -2488,7 +2493,8 @@
                         <div class="content">
                             <div class="card v-card">
                                 <button data-v-3a358218="" type="button"
-                                    class="close-btn v-btn v-btn--icon v-btn--round theme--light v-size--default" onclick="hideDialogDonate()">
+                                    class="close-btn v-btn v-btn--icon v-btn--round theme--light v-size--default"
+                                    onclick="hideDialogDonate()">
                                     <span class="v-btn__content">
                                         <span data-v-3a358218="" aria-hidden="true"
                                             class="v-icon notranslate theme--light">
@@ -2516,7 +2522,7 @@
                                     <br>
                                     <div>
                                         <span style="color: #4f3fa9; font-weight: bold; font-size: 19px;">TP</span><span
-                                            style="color: #7864e8; font-size: 18px;">Bank</span><span> - 0119 0219 001</span>
+                                            style="color: #7864e8; font-size: 18px;">Bank</span><span>&nbsp;-&nbsp;0119&nbsp;0219&nbsp;001</span>
                                     </div>
                                     <img style=" width: 100px; height: auto; " src="./assets/img/QR_Tuan.png">
                                 </div>
@@ -2528,7 +2534,7 @@
                                     <br>
                                     <div>
                                         <span style="color: #4f3fa9; font-weight: bold; font-size: 19px;">TP</span><span
-                                            style="color: #7864e8; font-size: 18px;">Bank</span><span> - 0046 4886 001</span>
+                                            style="color: #7864e8; font-size: 18px;">Bank</span><span>&nbsp;-&nbsp;0046&nbsp;4886&nbsp;001</span>
                                     </div>
                                     <img style=" width: 100px; height: auto; " src="./assets/img/QR_Lan.png">
                                 </div>
