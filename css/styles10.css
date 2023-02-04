@@ -1542,14 +1542,14 @@ a:hover {
 .t8-footer-default {
   margin: 0 auto;
   background-color: var(--color-3);
-  padding: 40px;
+  padding: 20px;
   border-top: 1px solid #fff;
 }
 
 .t8-footer {
   margin: 0 auto;
   background-color: var(--color-3);
-  padding: 40px;
+  padding: 20px;
 }
 
 .t8-footer-text {
