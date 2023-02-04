@@ -157,7 +157,11 @@ a:hover {
   right: 25%;
   top: 37%;
 }
-
+.banner-icon-4 {
+  position: absolute;
+  right: 25%;
+  top: 57%;
+}
 .banner-icon-1 {
   top: 65%;
   left: 20%;
@@ -1258,7 +1262,7 @@ a:hover {
 .t8-event-item {
   display: flex;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 65px;
 }
 
 .event-icon {
@@ -1382,6 +1386,7 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   padding: 10px 0;
+  padding-top: 30px;
 }
 .t8-lienhe {
   background-color: var(--color-4);
@@ -2186,7 +2191,10 @@ a:hover {
     height: 46px;
     margin: 17px 0;
   }
-
+  .mt-40-custom .col-xs-6 .sub-div .constact-fix {
+    width: 90px;
+    height: 90px;
+  }
   .t8-banner-main .and img {
     width: 100%;
   }
@@ -2266,7 +2274,12 @@ a:hover {
     top: 18%;
     left: 75%;
   }
-
+  .banner-icon-4 {
+    position: absolute;
+    right: 78%;
+    top: 45%;
+    width: 13%;
+  }
   .t8-location-date-default {
     left: 32%;
   }
@@ -2539,8 +2552,8 @@ a:hover {
   }
 
   .t8-event-time .wr {
-    width: 100%;
-    float: unset;
+    /* width: 100%; */
+    float: left;
   }
 
   .journey-icon1-mau1 {
@@ -2603,7 +2616,7 @@ a:hover {
 
   .t8-event-main .icon-heart {
     font-size: 35px;
-    left: 10.2%;
+    /* left: 10.2%; */
   }
 
   .t8-journey-content .icon-heart {
@@ -2707,20 +2720,21 @@ a:hover {
   }
 
   .t8-event-main::before {
-    left: 9.9%;
+    /* left: 9.9%; */
   }
 
   .event-icon {
-    left: 5.5%;
+    left: 48.5%;
   }
 
   .event-icon::after {
-    width: 60px;
-    left: 0;
+    width: 80px;
+    left: -35px;
   }
 
   .t8-event-item {
-    display: block;
+    /* display: block; */
+    margin-bottom: 50px;
   }
 
   .t8-event-content {
@@ -2743,10 +2757,9 @@ a:hover {
   }
 
   .t8-event-content {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    padding-left: 20%;
-    padding-right: 10%;
+    padding: 0px;
+    padding-left: 48px;
+    margin: auto;
   }
   .count-down-wrap .time-left {
     height: 105px;
