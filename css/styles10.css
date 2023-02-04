@@ -54,11 +54,11 @@ body {
   text-decoration: none;
 }
 
-a,
+/* a,
 a:hover {
   color: var(--color-2);
   text-decoration: none;
-}
+} */
 
 #call-to-donate {
   right: 0px !important;
