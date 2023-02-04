@@ -2363,7 +2363,7 @@
             if (event != null && event.target.localName != 'div') {
                 return;
             }
-            document.body.style.overflowY = 'auto';
+            enableScroll();
             document.querySelector('#dialog-previewImage').style.display = 'none';
         }
 
@@ -2378,7 +2378,7 @@
             });
             // src = `./assets/img/theme/AnhCuoi/gallery-${index + 1}.jpeg`;
             document.querySelector('#dialog-previewImage').style.display = 'flex';
-            document.body.style.overflowY = 'hidden';
+            disableScroll();
         }
 
         function clickoption(value) {
@@ -2393,6 +2393,7 @@
         function sendData() {
             document.getElementById('loading2').style.display = 'flex';
             document.body.style.pointerEvents = 'none';
+            disableScroll();
             let name = document.querySelector('#input_name').value;
             let songuoi = parseInt(document.querySelector('#id_field_sl').value);
             let phuongtien = parseInt(document.querySelector('#id_field_pt').value);
@@ -2405,6 +2406,7 @@
             fetch(url).then(function (response) {
                 document.getElementById('loading2').style.display = 'none';
                 document.body.style.pointerEvents = 'auto';
+                enableScroll();
                 alert('Cảm ơn bạn đã feedback!');
             }).then(function (data) {
                 console.log(data);
@@ -2455,6 +2457,16 @@
                 document.getElementById("countsecond").innerHTML = 0;
             }
         }, 1000);
+
+        function disableScroll() {
+            document.body.style.overflowY = 'hidden';
+            document.querySelector(`html`).style.overflowY = 'hidden';
+        }
+
+        function enableScroll() {
+            document.body.style.overflowY = 'auto';
+            document.querySelector(`html`).style.overflowY = 'auto';
+        }
     </script>
 </head>
 
@@ -3068,7 +3080,7 @@
                                                         <div class="form-btn-row">
                                                             <select id="id_field_sl" class="form-control2"
                                                                 name="thamdusonguoi">
-                                                                <option value="1">
+                                                                <option value="1" selected="selected">
                                                                     1 người
                                                                 </option>
                                                                 <option value="2">
@@ -3094,7 +3106,7 @@
                                                                 <option value="0">
                                                                     Tự túc
                                                                 </option>
-                                                                <option value="1">
+                                                                <option value="1" selected="selected">
                                                                     Đi chung
                                                                 </option>
                                                             </select>

@@ -4,6 +4,7 @@
   src: url(/fonts/MTD-Brand-Pro-Shade.otf) format("onetype");
   font-weight: 400;
 }
+
 .loader {
   position: relative;
   width: 128px;
