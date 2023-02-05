@@ -348,7 +348,7 @@ a:hover {
 }
 
 .t8-link {
-  background-image: url(https://static.namtay.vn/assets/img/theme8/image-link.png);
+  background-image: url('../assets/img/image-link.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
