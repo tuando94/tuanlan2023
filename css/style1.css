@@ -28620,31 +28620,20 @@ html {
 }
 .dialog {
   background-color: rgb(99 91 91 / 60%);
-  top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-
   left: 50%;
   top: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
   z-index: 10005 !important;
   position: fixed;
-
-  align-items: center;
-  display: flex;
   height: 100%;
-  justify-content: center;
-  /* left: 0; */
   pointer-events: none;
-  /* top: 0; */
   transition: 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), z-index 1ms;
-  /* width: 100%; */
   outline: none;
 }
 

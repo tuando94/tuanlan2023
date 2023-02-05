@@ -2422,8 +2422,6 @@
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
                 var elementVisible = 120;
-                console.log(`windowHeight= ${windowHeight}; elementTop=${elementTop}`);
-                console.log(`windowHeight - elementVisible= ${windowHeight - elementVisible};`);
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active-Animation");
                 } else {
@@ -2475,14 +2473,17 @@
                 document.getElementById("countsecond").innerHTML = 0;
             }
         }, 1000);
+
         function showDialogDonate() {
             document.querySelector(`#popupQR`).style.display = 'flex';
             disableScroll();
+            document.body.style.pointerEvents = 'none';
         }
 
         function hideDialogDonate() {
             document.querySelector(`#popupQR`).style.display = 'none';
             enableScroll();
+            document.body.style.pointerEvents = 'auto';
         }
         function disableScroll() {
             document.body.style.overflowY = 'hidden';
@@ -2614,7 +2615,7 @@
                                             <div data-gjs-type="text" draggable="true" data-highlightable="1"
                                                 data-block="decoration" data-decoration-id="4" class="decoration"
                                                 id="ihj7f"><img data-gjs-type="image"
-                                                    src="https://static.namtay.vn/assets/img/theme5/and.png" alt=""
+                                                    src="./assets/img/and.png" alt=""
                                                     id="i97zl"></div>
 
                                         </div>
@@ -2981,7 +2982,7 @@
                                                         <div class="wr">
                                                             <div data-block-node="timemark-datetime">
                                                                 <img data-gjs-type="image" data-editable="true"
-                                                                    src="https://static.namtay.vn/assets/img/theme16/gate.png"
+                                                                    src="./assets/img/gate.png"
                                                                     alt="" class="event-icons" id="i9fii">
                                                             </div>
                                                         </div>
@@ -3000,7 +3001,7 @@
                                                         <div class="wr">
                                                             <div data-block-node="timemark-datetime">
                                                                 <img data-gjs-type="image" data-editable="true"
-                                                                    src="https://static.namtay.vn/assets/img/theme16/ring-2.png"
+                                                                    src="./assets/img/ring-2.png"
                                                                     alt="" class="event-icons" id="i6z0g">
                                                             </div>
                                                         </div>
@@ -3019,7 +3020,7 @@
                                                         <div class="wr">
                                                             <div data-block-node="timemark-datetime">
                                                                 <img data-gjs-type="image" data-editable="true"
-                                                                    src="https://static.namtay.vn/assets/img/theme16/plate-2.png"
+                                                                    src="./assets/img/plate-2.png"
                                                                     alt="" class="event-icons" id="iriks">
                                                             </div>
                                                         </div>
@@ -3039,7 +3040,7 @@
                                                         <div class="wr">
                                                             <div data-block-node="timemark-datetime">
                                                                 <img data-gjs-type="image" data-editable="true"
-                                                                    src="https://static.namtay.vn/assets/img/theme16/firework-2.png"
+                                                                    src="./assets/img/firework-2.png"
                                                                     alt="" class="event-icons" id="iriks">
                                                             </div>
                                                         </div>
@@ -3228,16 +3229,16 @@
                                         <img data-gjs-type="image" src="assets/img/theme/sssss.png" alt=""
                                             data-editable="true" data-max-width="900" class="mid-hero" id="ielm8">
                                         <img data-gjs-type="image"
-                                            src="https://static.namtay.vn/assets/img/theme17/heart.gif" alt=""
+                                            src="./assets/img/heart.gif" alt=""
                                             class="tr-big absolute" id="it8gh">
                                         <img data-gjs-type="image"
-                                            src="https://static.namtay.vn/assets/img/theme17/heart.gif" alt=""
+                                            src="./assets/img/heart.gif" alt=""
                                             class="bl-sm absolute" id="iebqx">
                                         <img data-gjs-type="image"
-                                            src="https://static.namtay.vn/assets/img/theme17/heart.gif" alt=""
+                                            src="./assets/img/heart.gif" alt=""
                                             class="tl-sm absolute" id="iqnw6">
                                         <img data-gjs-type="image"
-                                            src="https://static.namtay.vn/assets/img/theme17/star.gif" alt=""
+                                            src="./assets/img/star.gif" alt=""
                                             class="tr-sm absolute" id="igdf2">
                                     </div>
                                 </section>
