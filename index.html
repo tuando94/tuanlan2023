@@ -2416,7 +2416,21 @@
 
         }
 
-
+        function reveal() {
+            var reveals = document.querySelectorAll(".revealAnimation");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 120;
+                console.log(`windowHeight= ${windowHeight}; elementTop=${elementTop}`);
+                console.log(`windowHeight - elementVisible= ${windowHeight - elementVisible};`);
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active-Animation");
+                } else {
+                    reveals[i].classList.remove("active-Animation");
+                }
+            }
+        }
         onReady(function () {
             setTimeout(() => {
                 document.querySelector('.pageMain').style.display = 'block';
@@ -2426,6 +2440,10 @@
                 (document.querySelector('#input_name')).addEventListener('input', () => {
                     document.getElementById('sendDataSubmit').classList.remove("inactive");
                 });
+                window.addEventListener("scroll", reveal);
+
+                // To check the scroll position on page load
+                reveal();
             }, 1888);
         });
 
@@ -2584,7 +2602,7 @@
                                 </div>
                                 <div class="wrapper">
                                     <div class="t8-banner-main">
-                                        <div class="banner-groom">
+                                        <div class="banner-groom revealAnimation" data-transition-duration="800">
                                             <div class="name"
                                                 style=" font-weight: 400; text-shadow: -2px 2px 0px rgb(28 28 28 / 25%);">
                                                 <p>Đỗ Tuấn</p>
@@ -2600,7 +2618,7 @@
                                                     id="i97zl"></div>
 
                                         </div>
-                                        <div class="banner-bride">
+                                        <div class="banner-bride revealAnimation" data-transition-duration="800">
                                             <div class="plus"> </div>
                                             <div class="name"
                                                 style=" font-weight: 400; text-shadow: -2px 2px 0px rgb(28 28 28 / 25%);">
@@ -2661,7 +2679,7 @@
                                 <div class="container" id="i7f1f">
                                     <div class="row main-bride">
                                         <div class="col-xl-6 col-lg-5 col-md-5 col-sm-12 col-12">
-                                            <div class="t8-main-item">
+                                            <div class="t8-main-item itemani revealAnimation" data-transition-duration="500">
                                                 <div class="item-mid"><img src="./assets/img/theme/bride_fix.JPG"
                                                         alt="bride" class="t8-img-bride"> <img
                                                         src="./assets/img/theme/main-border-bride.svg"
@@ -2674,7 +2692,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12">
-                                            <div class="t8-bride-text"><img src="./assets/img/theme/main-arrow-top.svg"
+                                            <div class="t8-bride-text itemani revealAnimation" data-transition-duration="500"><img src="./assets/img/theme/main-arrow-top.svg"
                                                     class="arrow-top"> <img
                                                     src="./assets/img/theme/main-arrow-bottom.svg"
                                                     class="arrow-bottom-mb">
@@ -2699,7 +2717,7 @@
                                     </div>
                                     <div class="row flex-xs">
                                         <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12">
-                                            <div class="t8-groom-text"><img
+                                            <div class="t8-groom-text itemani revealAnimation" data-transition-duration="600"><img
                                                     src="./assets/img/theme/main-arrow-bottom.svg"
                                                     class="arrow-bottom-mb">
                                                 <div class="title">Chú rể</div>
@@ -2714,7 +2732,7 @@
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-lg-5 col-md-5 col-sm-12 col-12">
-                                            <div class="t8-main-item item-groom">
+                                            <div class="t8-main-item itemani  item-groom revealAnimation" data-transition-duration="600">
                                                 <div class="item-mid"><img src="./assets/img/theme/groom_fix.JPG"
                                                         alt="groom" class="t8-img-groom"> <img
                                                         src="./assets/img/theme/main-border-groom.svg"
@@ -2733,15 +2751,17 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 col-12 t8-wrapper-video">
-                                            <div class="t8-video-top"><iframe allowfullscreen="" width="560"
+                                            <div class="t8-video-top revealAnimation" data-transition-duration="1000" ><iframe allowfullscreen="" width="560"
                                                     height="315"
                                                     src="https://www.youtube.com/embed/LG5hQJsO8k0?autoplay=1&mute=1&loop=10"
                                                     title="YouTube video player" frameborder="0"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                     data-editable="true" class="video"></iframe></div>
-                                            <div class="t8-main-video">
+                                            <div class="t8-main-video revealAnimation" data-transition-duration="1000" >
                                                 <div class="title">Chuyện chúng mình</div>
-                                                <div class="paragraph">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Từ ghét đến yêu, từ chị thành em, từ người dưng
+                                                <div class="paragraph">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Từ ghét
+                                                    đến yêu, từ chị thành em, từ người dưng
                                                     thành người thương, từ xa lạ thành người thân.
                                                     Tất cả đều được dẫn dắt bởi 1 cảm xúc mà chúng mình gọi là "Cảm giác
                                                     gia đình" ♥</div>
@@ -2764,7 +2784,7 @@
                                                     <div data-block="decoration" data-decoration-id="4"><img
                                                             src="./assets/img/theme/story-icon-heart-message.svg"
                                                             class="journey-icon"></div>
-                                                    <div class="t8-journey-box">
+                                                    <div class="t8-journey-box revealAnimation" data-transition-duration="500">
                                                         <div class="t8-journey-img" style="background-color: #f19792;">
                                                             <img src="./assets/img/theme/FirtDate.jpg" alt=""
                                                                 style="border: 1px solid #dfe6fb;">
@@ -2776,7 +2796,7 @@
                                                         </div>
                                                     </div>
                                                     <div data-block-node="journey-point-content"
-                                                        class="t8-journey-text">Là ngày đầu tiên nàng quay lại Hà Nội
+                                                        class="t8-journey-text revealAnimation" data-transition-duration="500">Là ngày đầu tiên nàng quay lại Hà Nội
                                                         sau một thời gian dài làm việc ở nhà do dịch covid.<br>
                                                         Là một nhà hàng với món ăn yêu thích của cả hai.<br>
                                                         Là lần đầu tiên nàng cất tiếng gọi chàng là "Anh" ♥
@@ -2788,12 +2808,12 @@
                                                             class="journey-icon"></div>
 
                                                     <div data-block-node="journey-point-content"
-                                                        class="t8-journey-text">
+                                                        class="t8-journey-text revealAnimation" data-transition-duration="700" >
                                                         Quay lại nơi đã từng đặt chân để trả lời hẹn cho bản thân-
                                                         Fansipan ♥<br>
                                                         Một lòng háo hức mong chờ cảnh tuyết rơi nhưng chỉ thấy sương mù
                                                         với cái lạnh 1 độ kinh người. ♥</div>
-                                                    <div class="t8-journey-box">
+                                                    <div class="t8-journey-box revealAnimation" data-transition-duration="700">
                                                         <div class="t8-journey-img"><img
                                                                 src="./assets/img/theme/2205_w023_n001_2321b_p1_2321.jpg"
                                                                 alt="">
@@ -2809,7 +2829,7 @@
                                                     <div data-block="decoration" data-decoration-id="4"><img
                                                             src="./assets/img/theme/story-icon-rings.svg"
                                                             class="journey-icon"></div>
-                                                    <div class="t8-journey-box">
+                                                    <div class="t8-journey-box revealAnimation" data-transition-duration="1000">
                                                         <div class="t8-journey-img" style="background-color: #f19792;">
                                                             <img src="./assets/img/theme/beach.jpg" alt="">
                                                             <div data-block-node="journey-point-date" class="date">
@@ -2819,7 +2839,7 @@
                                                         </div>
                                                     </div>
                                                     <div data-block-node="journey-point-content"
-                                                        class="t8-journey-text">
+                                                        class="t8-journey-text revealAnimation" data-transition-duration="1000">
                                                         Chuyến đi của nhiều kỷ niệm đáng nhớ: lần đầu tiên được lặn biển
                                                         sờ ngắm san hô, lần đầu tiên bị dị ứng "tôm hùm", lần
                                                         đầu tiên được ăn nem nướng đúng "ngọt" và khoảnh khắc ngỡ ngàng
@@ -2831,12 +2851,12 @@
                                                             class="journey-icon"></div>
 
                                                     <div data-block-node="journey-point-content"
-                                                        class="t8-journey-text">Sau
+                                                        class="t8-journey-text revealAnimation" data-transition-duration="1100">Sau
                                                         nhiều lần bị chê vô tâm, chàng đã âm thầm chuẩn bị buổi kỷ niệm
                                                         sinh
                                                         nhật muộn một cách bất ngờ và đầy sự xinh đẹp.<br>
                                                         Một chiếc sanh thần tuổi 31 hạnh phúc ♥</div>
-                                                    <div class="t8-journey-box">
+                                                    <div class="t8-journey-box revealAnimation" data-transition-duration="1100">
                                                         <div class="t8-journey-img"><img
                                                                 src="./assets/img/theme/6094451.jpg" alt="">
                                                             <div data-block-node="journey-point-date" class="date">
@@ -2956,7 +2976,7 @@
                                     <div class="row">
                                         <div class="t8-event-main">
                                             <div class class="row">
-                                                <div data-block="timemark" class="t8-event-item">
+                                                <div data-block="timemark" data-transition-duration="500" class="t8-event-item revealAnimation">
                                                     <div class="t8-event-time">
                                                         <div class="wr">
                                                             <div data-block-node="timemark-datetime">
@@ -2975,7 +2995,7 @@
 
                                                     </div>
                                                 </div>
-                                                <div data-block="timemark" class="t8-event-item">
+                                                <div data-block="timemark" data-transition-duration="700" class="t8-event-item revealAnimation">
                                                     <div class="t8-event-time">
                                                         <div class="wr">
                                                             <div data-block-node="timemark-datetime">
@@ -2994,7 +3014,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div data-block="timemark" class="t8-event-item">
+                                                <div data-block="timemark" data-transition-duration="900" class="t8-event-item revealAnimation">
                                                     <div class="t8-event-time">
                                                         <div class="wr">
                                                             <div data-block-node="timemark-datetime">
@@ -3014,7 +3034,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div data-block="timemark" class="t8-event-item">
+                                                <div data-block="timemark" data-transition-duration="1100" class="t8-event-item revealAnimation">
                                                     <div class="t8-event-time">
                                                         <div class="wr">
                                                             <div data-block-node="timemark-datetime">
@@ -3088,8 +3108,9 @@
                                             <div class="form">
                                                 <div class="t8-contact-form">
                                                     <div class="t8-form-group">
-                                                        <p class="form-title">Tên của bạn<span id="i6vhk6">*</span></p><input id="input_name"
-                                                            type="text" placeholder="Khánh Vy - Bạn cấp 3" required=""
+                                                        <p class="form-title">Tên của bạn<span id="i6vhk6">*</span></p>
+                                                        <input id="input_name" type="text"
+                                                            placeholder="Khánh Vy - Bạn cấp 3" required=""
                                                             class="form-input">
                                                     </div>
                                                     <div class="t8-form-group">
