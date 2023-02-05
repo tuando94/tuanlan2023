@@ -137,8 +137,8 @@ a:hover {
   font-size: 40px;
   width: 250px;
   border-radius: 5px;
-  border-top: 1.5px solid #c91a1a;
-  border-bottom: 1.5px solid #c91a1a;
+  border-top: 1.5px solid var(--color-1);
+  border-bottom: 1.5px solid var(--color-1);
   color: var(--color-1);
   font-family: var(--font-1);
   margin: 0 auto;
@@ -588,7 +588,7 @@ a:hover {
   color: var(--color-2);
   font-size: 20px;
   white-space: normal;
-  padding: 0 1rem;
+  padding: 0 20px;
   font-family: var(--font-2);
 }
 
@@ -2522,7 +2522,7 @@ a:hover {
     display: block;
     transform: rotate(-50deg);
     position: absolute;
-    top: -42%;
+    top: -50%;
     left: 20%;
   }
 
