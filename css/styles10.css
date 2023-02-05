@@ -125,7 +125,7 @@ a:hover {
 
 .itemani.active-Animation {
   opacity: 1;
-  transform: translateZ(0);
+  transform: none !important;
 }
 
 .banner-groom {
